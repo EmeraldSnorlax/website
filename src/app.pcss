@@ -1,1 +1,158 @@
 /* Write your global styles here, in PostCSS syntax */
+
+body::before {
+	background: url('/noise.png');
+	background-size: 2%;
+	content: '';
+	height: 120%;
+	width: 120%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 75%;
+	animation: grain 9s steps(10) infinite;
+	image-rendering: pixelated;
+	pointer-events: none;
+}
+
+html::after {
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 30%) 66%, black 100%);
+	pointer-events: none;
+}
+
+body::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+	z-index: 2;
+	background-size: 0.1% 3px; /* todo: clamp */
+	pointer-events: none;
+	animation: scroll 30s infinite steps(200);
+}
+
+@keyframes scroll {
+	0% {
+		background-position:
+			0 0,
+			0 0;
+	}
+	100% {
+		background-position:
+			0 100%,
+			100% 0;
+	}
+}
+
+@keyframes grain {
+	0%,
+	100% {
+		transform: translate(0, 0);
+	}
+	10% {
+		transform: translate(-5%, -10%);
+	}
+	20% {
+		transform: translate(-15%, -20%);
+	}
+	30% {
+		transform: translate(-5%, -10%);
+	}
+	40% {
+		transform: translate(-15%, -20%);
+	}
+	50% {
+		transform: translate(-5%, -10%);
+	}
+	60% {
+		transform: translate(-15%, -20%);
+	}
+	70% {
+		transform: translate(-5%, -10%);
+	}
+	80% {
+		transform: translate(-15%, -20%);
+	}
+	90% {
+		transform: translate(-5%, -10%);
+	}
+	100% {
+		transform: translate(-15%, -20%);
+	}
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 0.27861;
+	}
+	5% {
+		opacity: 0.34769;
+	}
+	10% {
+		opacity: 0.23604;
+	}
+	15% {
+		opacity: 0.90626;
+	}
+	20% {
+		opacity: 0.18128;
+	}
+	25% {
+		opacity: 0.83891;
+	}
+	30% {
+		opacity: 0.65583;
+	}
+	35% {
+		opacity: 0.67807;
+	}
+	40% {
+		opacity: 0.26559;
+	}
+	45% {
+		opacity: 0.84693;
+	}
+	50% {
+		opacity: 0.96019;
+	}
+	55% {
+		opacity: 0.08594;
+	}
+	60% {
+		opacity: 0.20313;
+	}
+	65% {
+		opacity: 0.71988;
+	}
+	70% {
+		opacity: 0.53455;
+	}
+	75% {
+		opacity: 0.37288;
+	}
+	80% {
+		opacity: 0.71428;
+	}
+	85% {
+		opacity: 0.70419;
+	}
+	90% {
+		opacity: 0.7003;
+	}
+	95% {
+		opacity: 0.36108;
+	}
+	100% {
+		opacity: 0.24387;
+	}
+}

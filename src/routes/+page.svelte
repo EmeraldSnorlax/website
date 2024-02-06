@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<main>guh, hello chat, nice to meet you :)</main>
+
+<style lang="postcss">
+	main {
+		min-height: 100vh;
+		min-width: 100vw;
+		background: url('/bg/main-crunched.png') center center fixed;
+		background-size: cover;
+		image-rendering: pixelated;
+	}
+</style>
