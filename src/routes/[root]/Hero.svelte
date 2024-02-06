@@ -18,8 +18,10 @@
 		height: 23rem;
     aspect-ratio: 1/1;
 	}
+
   .crt-content {
-    width: 100%;
+    background-color: red;
     height: 100%;
+    width: 100%;
   }
 </style>
