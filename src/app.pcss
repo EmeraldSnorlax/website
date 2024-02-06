@@ -1,29 +1,70 @@
-/* Write your global styles here, in PostCSS syntax */
+/* motion based effects are allowed if the user is ok with motion */
+@custom-media --motion not (prefers-reduced-motion);
 
-body::before {
-	background: url('/noise.png');
-	background-size: 2%;
-	content: '';
-	height: 120%;
-	width: 120%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	opacity: 75%;
-	animation: grain 9s steps(4) infinite;
-	image-rendering: pixelated;
-	pointer-events: none;
+/* lofi effects are allowed if the user doesn't want contrast */
+@custom-media --lofi not ((prefers-contrast: more) or (forced-colors));
+
+/* very distracting effects; both lofi and motion. */
+@custom-media --distracting (--lofi) and (--motion);
+
+body {
+	background: #334143;
 }
 
-html::after {
-	content: '';
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 30%) 66%, black 100%);
-	pointer-events: none;
+@media (--motion) {
+	body {
+		background: url('/bg/240.apng') fixed;
+		image-rendering: pixelated;
+		background-size: cover;
+	}
+}
+
+@media (--lofi) {
+	/* vignette */
+	html::after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: radial-gradient(ellipse at center, rgba(0, 0, 0, 20%) 66%, black 100%);
+		pointer-events: none;
+	}
+	/* scanlines */
+	body::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+			linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 128, 0, 0.1), rgba(0, 0, 255, 0.05));
+		z-index: 2;
+		background-size:
+			100% 1%,
+			1% 100%;
+		pointer-events: none;
+	}
+}
+
+@media (--distracting) {
+	body::before {
+		background: url('/noise.png');
+		background-size: 10%;
+		content: '';
+		height: 120%;
+		width: 120%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		opacity: 90%;
+		animation: grain 7s steps(6) infinite;
+		image-rendering: pixelated;
+		pointer-events: none;
+	}
 }
 
 @keyframes grain {
@@ -60,71 +101,5 @@ html::after {
 	}
 	100% {
 		transform: translate(-15%, -20%);
-	}
-}
-
-@keyframes flicker {
-	0% {
-		opacity: 0.27861;
-	}
-	5% {
-		opacity: 0.34769;
-	}
-	10% {
-		opacity: 0.23604;
-	}
-	15% {
-		opacity: 0.90626;
-	}
-	20% {
-		opacity: 0.18128;
-	}
-	25% {
-		opacity: 0.83891;
-	}
-	30% {
-		opacity: 0.65583;
-	}
-	35% {
-		opacity: 0.67807;
-	}
-	40% {
-		opacity: 0.26559;
-	}
-	45% {
-		opacity: 0.84693;
-	}
-	50% {
-		opacity: 0.96019;
-	}
-	55% {
-		opacity: 0.08594;
-	}
-	60% {
-		opacity: 0.20313;
-	}
-	65% {
-		opacity: 0.71988;
-	}
-	70% {
-		opacity: 0.53455;
-	}
-	75% {
-		opacity: 0.37288;
-	}
-	80% {
-		opacity: 0.71428;
-	}
-	85% {
-		opacity: 0.70419;
-	}
-	90% {
-		opacity: 0.7003;
-	}
-	95% {
-		opacity: 0.36108;
-	}
-	100% {
-		opacity: 0.24387;
 	}
 }
