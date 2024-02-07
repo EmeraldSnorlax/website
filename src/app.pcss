@@ -21,7 +21,7 @@ body {
 
 @media (--lofi) {
 	/* vignette */
-	html::after {
+	html::after, .vignette::after {
 		content: '';
 		height: 100%;
 		width: 100%;
@@ -32,7 +32,7 @@ body {
 		pointer-events: none;
 	}
 	/* scanlines */
-	body::after {
+	body::after, .scanlines::before {
 		content: '';
 		display: block;
 		position: fixed;

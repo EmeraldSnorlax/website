@@ -26,11 +26,12 @@
 	}
 </script>
 
-<canvas bind:this={canvas} width={600} height={600} />
-
 <div class="crt-wrapper">
 	<Crt>
-		<div class="crt-content"></div>
+		<div class="crt-content scanlines vignette">
+			<div class="rolling-scanline" />
+			<canvas bind:this={canvas} width={600} height={600} />
+		</div>
 	</Crt>
 </div>
 
@@ -39,13 +40,45 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 23rem;
 		aspect-ratio: 1/1;
 	}
 
 	.crt-content {
-		background-color: red;
 		height: 100%;
 		width: 100%;
+		background: radial-gradient(circle, rgba(5, 17, 30, 1) 0%, rgba(148, 24, 24, 1) 100%);
+		container-type: size;
+	}
+	canvas {
+		width: 100%;
+		aspect-ratio: 1/1;
+	}
+	@container (width > 128px) {
+		canvas {
+			filter: blur(1px);
+		}
+	}
+	@container (width > 400px) {
+		canvas {
+			filter: blur(2px);
+		}
+	}
+
+	@media not (prefers-reduced-motion) {
+		canvas {
+			animation: shake 0.01s infinite steps(6);
+		}
+	}
+
+	@keyframes shake {
+		0% {
+			transform: translate(0.9px, 0.1px);
+		}
+		50% {
+			transform: translateX(0.3px);
+		}
+		100% {
+			transform: translate(-0.1px, -0.1px);
+		}
 	}
 </style>
