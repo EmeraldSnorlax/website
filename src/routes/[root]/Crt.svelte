@@ -18,7 +18,6 @@
 		height: 60%;
 		transform: translateY(15%);
 		position: relative;
-		@mixin crt-mask;
 	}
 
 	.frame-inner::after {
