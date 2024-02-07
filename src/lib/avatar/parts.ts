@@ -34,32 +34,34 @@ async function loadPart(src: string, type: PartType, id: string): Promise<Part> 
 }
 
 /**
- * Fetch all the parts we can use.
- * 
- * ** THIS CAN ONLY RUN IN THE BROWSER **
- * @returns {Promise<Part[]>} A promise that resolves to an array of parts.
- * @example
- * const parts = await loadParts();
- * // => [ { image: HTMLImageElement, type: 'eyes', id: 'eyes-001' }, ... ]
- */
-export function loadParts(): Promise<Part[]> {
+  * Fetch all the parts we can use.
+  * @description
+  * To add additional parts, edit the `parts` object in this function.
+  * 
+  * ** THIS CAN ONLY RUN IN THE BROWSER **
+  * @example
+  * const parts = await loadParts();
+  *	const ctx = canvas.getContext('2d');
+  *	draw(ctx, [parts.body, parts.shadow]);
+  * */
+export function loadParts(): Promise<{ [id: string]: Part }> {
   if (typeof window === 'undefined') {
     throw new Error('you tried to loadParts outside of the browser...');
   }
-  const parts = [
-    // fixed parts
-    loadPart('/av/body.png', 'body', 'body'),
-    loadPart('/av/shadow.png', 'shadow', 'shadow'),
-    loadPart('/av/hair.png', 'hair', 'hair'),
+  // Parts that we want to load and use.
+  const parts = {
+    'body': loadPart('/av/body.png', 'body', 'body'),
+    'shadow': loadPart('/av/shadow.png', 'shadow', 'shadow'),
+    'hair': loadPart('/av/hair.png', 'hair', 'hair'),
+    'glasses': loadPart('/av/glasses.png', 'glasses', 'glasses'),
+    'eyebrows-001': loadPart('/av/eyebrows-001.png', 'eyebrows', 'eyebrows-001'),
+    'mouth-009': loadPart('/av/mouth-009.png', 'mouth', 'mouth-009'),
+    'outfit-018': loadPart('/av/outfit-018.png', 'outfit', 'outfit-018'),
+    'halo-003': loadPart('/av/halo-003.png', 'halo', 'halo-003'),
+    'eyes-011': loadPart('av/eyes-011.png', 'eyes', 'eyes-011'),
+  }
 
-    // swappable parts
-    loadPart('/av/glasses.png', 'glasses', 'glasses'), // glasses, default pfp, toggle if needed.
-    loadPart('/av/eyebrows-001.png', 'eyebrows', 'eyebrows-001'), // slightly raised eyebrows, default pfp
-    loadPart('/av/mouth-009.png', 'mouth', 'mouth-009'), // slight frown, default pfp
-    loadPart('/av/outfit-018.png', 'outfit', 'outfit-018'), // blazer and shirt and tie, default pfp
-    loadPart('/av/halo-003.png', 'halo', 'halo-003'), // red melting halo, default pfp
-    loadPart('av/eyes-011.png', 'eyes', 'eyes-011'), // peeking eyes, default pfp
-  ]
-  return Promise.all(parts);
+  return Promise.all(Object.entries(parts).map(([id, partPromise]) => partPromise.then(part => [id, part])))
+    .then(entries => Object.fromEntries(entries));
 }
 
