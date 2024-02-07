@@ -14,7 +14,7 @@ type PartType = 'shadow' | 'halo' | 'hair' | 'pupils' | 'outfit' | 'mark' | 'eye
  * A part of the avatar.
  * @example { image: HTMLImageElement, type: 'eyes', id: 'eyes-001' }
  */
-interface Part {
+export interface Part {
   image: HTMLImageElement;
   type: PartType;
   id: string;
@@ -58,6 +58,7 @@ export function loadParts(): Promise<Part[]> {
     loadPart('/av/mouth-009.png', 'mouth', 'mouth-009'), // slight frown, default pfp
     loadPart('/av/outfit-018.png', 'outfit', 'outfit-018'), // blazer and shirt and tie, default pfp
     loadPart('/av/halo-003.png', 'halo', 'halo-003'), // red melting halo, default pfp
+    loadPart('av/eyes-011.png', 'eyes', 'eyes-011'), // peeking eyes, default pfp
   ]
   return Promise.all(parts);
 }
