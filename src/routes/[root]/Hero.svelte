@@ -1,5 +1,5 @@
 <script>
-	import Crt from './Crt.svelte';
+	import Crt from '$lib/Crt.svelte';
 </script>
 
 <div class="crt-wrapper">
