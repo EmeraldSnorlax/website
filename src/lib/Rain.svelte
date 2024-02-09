@@ -27,21 +27,10 @@
 </script>
 
 <div class="aspect-square block">
-	<Crt>
-		<div class="crt-content scanlines vignette">
-			<div class="rolling-scanline" />
 			<canvas bind:this={canvas} width={600} height={600} class="w-full aspect-square"/>
-		</div>
-	</Crt>
 </div>
 
 <style lang="postcss">
-	.crt-content {
-		@apply h-full w-full;
-		background: radial-gradient(circle, rgba(5, 17, 30, 1) 0%, rgba(148, 24, 24, 1) 100%);
-		container-type: size;
-	}
-
 	@container (width > 256px) {
 		canvas {
 			@apply blur-[1px];

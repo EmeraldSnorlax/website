@@ -1,5 +1,5 @@
-<div class="frame relative aspect-square h-full w-full shadow-2xl">
-	<div class="frame-inner relative m-auto h-[60%] w-[80%] translate-y-[15%] transform">
+<div class="frame relative aspect-square h-full w-full">
+	<div class="frame-inner relative m-auto h-[60%] w-[80%] translate-y-[15%]">
 		<slot />
 	</div>
 </div>
@@ -9,7 +9,7 @@
 		/* vignette */
 		content: '';
 		@apply pointer-events-none fixed left-0 top-0 h-full w-full;
-		background: radial-gradient(ellipse at center, rgba(0, 0, 0, 10%) 70%, black 100%);
+		background: radial-gradient(ellipse at center, rgba(0, 0, 0, 10%) 50%, black 100%);
 	}
 
 	.frame-inner,
@@ -21,4 +21,9 @@
 		mask-position: center 22.5%;
 	}
 
+	.frame-inner {
+		@apply h-full w-full;
+		background: radial-gradient(circle, rgba(5, 17, 30, 1) 0%, rgba(148, 24, 24, 1) 100%);
+		container-type: size;
+	}
 </style>
