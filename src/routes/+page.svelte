@@ -8,14 +8,18 @@
 </svelte:head>
 
 <main class="min-h-screen px-8">
-	<div class="grid grid-cols-4 grid-rows-3 gap-8">
+	<div class="grid scale-50 grid-cols-4 grid-rows-3">
+		<div class="col-start-2 row-start-1 translate-y-8"><Crt /></div>
+		<div class="col-start-3 row-start-1 translate-x-4"><Crt /></div>
+
+		<div class="col-start-1 row-start-2 translate-y-9 -translate-x-3"><Crt /></div>
 		<div class="col-start-2 row-start-2"><Crt><Rain /></Crt></div>
-		<div class="col-start-3 row-start-2">3</div>
-		<div class="col-start-2 row-start-1">4</div>
-		<div class="row-start-3">5</div>
-		<div class="col-start-4 row-start-3">6</div>
-		<div class="col-start-2 row-start-3">8</div>
-		<div class="col-start-3 row-start-3">10</div>
+		<div class="col-start-3 row-start-2 translate-x-2 -translate-y-12"><Crt /></div>
+
+		<div class="row-start-3 -translate-x-4 "><Crt /></div>
+		<div class="col-start-2 row-start-3 -translate-x-3 -translate-y-8"><Crt /></div>
+		<div class="col-start-3 row-start-3 -translate-y-12 translate-x-4"><Crt /></div>
+
 	</div>
 </main>
 
