@@ -1,5 +1,5 @@
-<div class="frame relative aspect-square h-full w-full">
-	<div class="frame-inner relative m-auto h-[60%] w-[80%] translate-y-[15%]">
+<div class="frame relative aspect-square h-full w-full -mt-5 -mb-6">
+	<div class="frame-inner relative m-auto h-[60%] w-[80%]">
 		<slot />
 	</div>
 </div>
