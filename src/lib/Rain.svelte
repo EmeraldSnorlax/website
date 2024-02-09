@@ -26,41 +26,25 @@
 	}
 </script>
 
-<div class="crt-wrapper">
+<div class="flex justify-center items-center aspect-square">
 	<Crt>
 		<div class="crt-content scanlines vignette">
 			<div class="rolling-scanline" />
-			<canvas bind:this={canvas} width={600} height={600} />
+			<canvas bind:this={canvas} width={600} height={600} class="w-full aspect-square"/>
 		</div>
 	</Crt>
 </div>
 
 <style lang="postcss">
-	.crt-wrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		aspect-ratio: 1/1;
-	}
-
 	.crt-content {
-		height: 100%;
-		width: 100%;
+		@apply h-full w-full;
 		background: radial-gradient(circle, rgba(5, 17, 30, 1) 0%, rgba(148, 24, 24, 1) 100%);
 		container-type: size;
 	}
-	canvas {
-		width: 100%;
-		aspect-ratio: 1/1;
-	}
-	@container (width > 128px) {
+
+	@container (width > 256px) {
 		canvas {
-			filter: blur(1px);
-		}
-	}
-	@container (width > 400px) {
-		canvas {
-			filter: blur(2px);
+			@apply blur-[1px];
 		}
 	}
 

@@ -1,3 +1,5 @@
+@tailwind base;
+
 /* motion based effects are allowed if the user is ok with motion */
 @custom-media --motion not (prefers-reduced-motion);
 
@@ -15,38 +17,29 @@ body {
 	body {
 		background: url('/bg/240.apng') fixed;
 		image-rendering: pixelated;
-		background-size: cover;
+		@apply bg-cover;
 	}
 }
 
 @media (--lofi) {
 	/* vignette */
-	html::after, .vignette::after {
+	html::after,
+	.vignette::after {
 		content: '';
-		height: 100%;
-		width: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
+		@apply pointer-events-none fixed left-0 top-0 h-full w-full;
 		background: radial-gradient(ellipse at center, rgba(0, 0, 0, 20%) 66%, black 100%);
-		pointer-events: none;
+		z-index: 30;
 	}
 	/* scanlines */
-	body::after, .scanlines::before {
+	body::after,
+	.scanlines::before {
 		content: '';
-		display: block;
-		position: fixed;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
+		@apply fixed block top-0 left-0 bottom-0 right-0 z-40 pointer-events-none;
 		background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
 			linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 128, 0, 0.1), rgba(0, 0, 255, 0.05));
-		z-index: 2;
 		background-size:
 			100% 1%,
 			1% 100%;
-		pointer-events: none;
 	}
 }
 
@@ -54,16 +47,10 @@ body {
 	body::before {
 		background: url('/noise.png');
 		background-size: 10%;
+		@apply h-[120%] w-[120%] fixed top-0 left-0 opacity-90 pointer-events-none;
 		content: '';
-		height: 120%;
-		width: 120%;
-		position: fixed;
-		top: 0;
-		left: 0;
-		opacity: 90%;
 		animation: grain 7s steps(6) infinite;
 		image-rendering: pixelated;
-		pointer-events: none;
 	}
 }
 
@@ -103,3 +90,7 @@ body {
 		transform: translate(-15%, -20%);
 	}
 }
+
+@tailwind components;
+
+@tailwind utilities;
