@@ -7,7 +7,7 @@ import type { Part } from './parts';
  * @param parts Array of all parts to draw. Front of the array is the 'bottom' and will be covered by later elements.
  * @param clear Set to false to not clear the canvas before drawing (why...?). Optional, defaults to true.
  */
-export function draw(ctx: CanvasRenderingContext2D, parts: Part[], clear = true) {
+export function draw(ctx: CanvasRenderingContext2D|OffscreenCanvasRenderingContext2D, parts: Part[], clear = true) {
   if (clear) {
     ctx.clearRect(0, 0, 600, 600);
   }

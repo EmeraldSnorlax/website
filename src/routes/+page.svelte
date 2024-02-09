@@ -6,7 +6,7 @@
 	import { onMount } from 'svelte';
 	import { draw } from '$lib/avatar';
 
-	let rain: HTMLCanvasElement;
+	let rain: OffscreenCanvas;
 	let fragments: HTMLCanvasElement[][] = [];
 
 	if (browser) {
@@ -28,6 +28,7 @@
 					document.createElement('canvas')
 				]
 			];
+			rain = new OffscreenCanvas(600, 600);
 			if (!rain) return;
 			const parts = await loadParts();
 			const fullCtx = rain.getContext('2d');
@@ -47,7 +48,7 @@
 				row.forEach((fragment, x) => {
 					const ctx = fragment.getContext('2d');
 					if (!ctx) return;
-					ctx.drawImage(rain, x * 200, y * 200 - 50, 200, 200, 0, 0, 200, 200);
+					ctx.drawImage(rain, x * 200, y * 200 - 20, 200, 200, 0, 0, 200, 200);
 				});
 			});
 		});
@@ -58,19 +59,20 @@
 	<link rel="preload" media="not (prefers-reduced-motion)" as="image" href="/bg/240.apng" />
 </svelte:head>
 
-<canvas bind:this={rain} width={600} height={600} class="hidden aspect-square w-full" />
-
 {#if browser}
 	<main class="min-h-screen px-8">
-		{#each fragments as row, y}
-			<div class="flex">
-				{#each row as fragment, x}
-					<div class="w-1/3">
-						{#if (x === 0 && y === 1) || (x === 2 && y ===2)}
-						<!-- cool static crts :)-->
-						<Crt />
-						{:else if !(x === 2 && y === 0)}
-						<!-- the rain fragments-->
+		<div class="hidden sm:block sm:max-h-screen m-auto">
+			{#each fragments as row, y}
+				<div class="flex h-1/3 w-1/3">
+					{#each row as fragment, x}
+						<div class="w-1/3 min-w-16 -mt-[calc(15% + 10px)]">
+							{#if (x === 0 && y === 1) || (x === 2 && y === 2) || (x === 2 && y === 0)}
+								<!-- cool no signal crts, give them each a unique id by adding row and col so we can offset them slightly -->
+									<Crt>
+										<div class={`no-signal no-signal-${x + y}`}></div>
+									</Crt>
+							{:else if !(x === 2 && y === 0)}
+								<!-- the rain fragments-->
 								<Crt>
 									<canvas
 										bind:this={fragment}
@@ -79,11 +81,12 @@
 										class="aspect-square w-full"
 									/>
 								</Crt>
-						{/if}
-					</div>
-				{/each}
-			</div>
-		{/each}
+							{/if}
+						</div>
+					{/each}
+				</div>
+			{/each}
+		</div>
 	</main>
 {/if}
 
@@ -97,5 +100,38 @@
 	}
 	canvas {
 		@apply aspect-square w-full;
+	}
+	.no-signal {
+		@apply h-[150%] w-[150%] inset-full;
+		background: url('/no_signal.png');
+	}
+	.no-signal-1 {
+		animation: shift 0.53s infinite steps(6);
+		@apply invert
+	}
+	.no-signal-2 {
+		animation: shift 0.15s infinite steps(2);
+		@apply -scale-y-100 -scale-x-100
+	}
+	.no-signal-4 {
+		animation: shift 1.01s infinite steps(6);
+		@apply -scale-x-100;
+		animation-direction: reverse
+
+	}
+	@media (prefers-reduced-motion) {
+		.no-signal {
+			animation: none;
+		}
+	}
+
+	@keyframes shift {
+		0% {
+			transform: translateX(-10%) translateY(-10%);
+		}
+
+		100% {
+			transform: translateX(-5%) translateY(2%);
+		}
 	}
 </style>
