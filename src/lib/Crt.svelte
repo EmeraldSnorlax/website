@@ -1,4 +1,4 @@
-<div class="frame relative aspect-square h-full w-full">
+<div class="frame relative aspect-square h-full w-full shadow-2xl">
 	<div class="frame-inner relative m-auto h-[60%] w-[80%] translate-y-[15%] transform">
 		<slot />
 	</div>
@@ -21,9 +21,4 @@
 		mask-position: center 22.5%;
 	}
 
-	.frame::before {
-		@apply absolute block h-full w-full bg-cover;
-		content: '';
-		background-image: url('/crt.png');
-	}
 </style>

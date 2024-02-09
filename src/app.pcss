@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* motion based effects are allowed if the user is ok with motion */
 @custom-media --motion not (prefers-reduced-motion);
@@ -10,15 +12,7 @@
 @custom-media --distracting (--lofi) and (--motion);
 
 body {
-	background: #334143;
-}
-
-@media (--motion) {
-	body {
-		background: url('/bg/240.apng') fixed;
-		image-rendering: pixelated;
-		@apply bg-cover;
-	}
+	background: rgb(30, 40, 40);
 }
 
 @media (--lofi) {
@@ -90,7 +84,3 @@ body {
 		transform: translate(-15%, -20%);
 	}
 }
-
-@tailwind components;
-
-@tailwind utilities;

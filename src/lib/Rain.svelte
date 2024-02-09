@@ -26,7 +26,7 @@
 	}
 </script>
 
-<div class="flex justify-center items-center aspect-square">
+<div class="aspect-square block">
 	<Crt>
 		<div class="crt-content scanlines vignette">
 			<div class="rolling-scanline" />
