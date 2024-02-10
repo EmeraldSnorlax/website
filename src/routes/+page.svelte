@@ -56,21 +56,21 @@
 </script>
 
 <svelte:head>
-	<link rel="preload" media="not (prefers-reduced-motion)" as="image" href="/bg/240.apng" />
+	<link rel="preload" media="not (prefers-reduced-motion)" as="image" href="/bg/180.apng" />
 </svelte:head>
 
-{#if browser}
-	<main class="min-h-screen px-8">
-		<div class="hidden sm:block sm:max-h-screen m-auto">
+<main class="min-h-screen px-8">
+	<div class="m-auto hidden sm:block sm:max-h-screen">
+		{#if browser}
 			{#each fragments as row, y}
 				<div class="flex h-1/3 w-1/3">
 					{#each row as fragment, x}
-						<div class="w-1/3 min-w-16 -mt-[calc(15% + 10px)]">
+						<div class="-mt-[calc(15% + 10px)] w-1/3 min-w-16">
 							{#if (x === 0 && y === 1) || (x === 2 && y === 2) || (x === 2 && y === 0)}
 								<!-- cool no signal crts, give them each a unique id by adding row and col so we can offset them slightly -->
-									<Crt>
-										<div class={`no-signal no-signal-${x + y}`}></div>
-									</Crt>
+								<Crt>
+									<div class={`no-signal no-signal-${x + y}`}></div>
+								</Crt>
 							{:else if !(x === 2 && y === 0)}
 								<!-- the rain fragments-->
 								<Crt>
@@ -86,14 +86,15 @@
 					{/each}
 				</div>
 			{/each}
-		</div>
-	</main>
-{/if}
+		{/if}
+	</div>
+	<h1>Hello, chat.</h1>
+</main>
 
 <style lang="postcss">
 	@media not (prefers-reduced-motion) {
 		main {
-			background: url('/bg/240.apng') fixed;
+			background: url('/bg/180.apng') fixed;
 			image-rendering: pixelated;
 			@apply bg-cover;
 		}
@@ -102,22 +103,21 @@
 		@apply aspect-square w-full;
 	}
 	.no-signal {
-		@apply h-[150%] w-[150%] inset-full;
+		@apply inset-full h-[150%] w-[150%];
 		background: url('/no_signal.png');
 	}
 	.no-signal-1 {
 		animation: shift 0.53s infinite steps(6);
-		@apply invert
+		@apply invert;
 	}
 	.no-signal-2 {
 		animation: shift 0.15s infinite steps(2);
-		@apply -scale-y-100 -scale-x-100
+		@apply -scale-x-100 -scale-y-100;
 	}
 	.no-signal-4 {
 		animation: shift 1.01s infinite steps(6);
 		@apply -scale-x-100;
-		animation-direction: reverse
-
+		animation-direction: reverse;
 	}
 	@media (prefers-reduced-motion) {
 		.no-signal {
