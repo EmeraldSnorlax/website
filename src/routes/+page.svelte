@@ -74,7 +74,7 @@
 			{#each fragments as row, y}
 				<div class="rows flex h-1/3 w-1/3">
 					{#each row as fragment, x}
-						<div class={`-mt-[calc(15% + 10px)] cols w-1/3 min-w-16`}>
+						<div class={`-mt-[calc(15% + 10px)] cols w-1/3 min-w-16 c-${x}`}>
 							{#if (x === 0 && y === 1) || (x === 2 && y === 2) || (x === 2 && y === 0)}
 								<!-- cool no signal crts, give them each a unique id by adding row and col so we can offset them slightly -->
 								<Crt>
@@ -211,13 +211,13 @@
 	@media not (prefers-reduced-motion) {
 		@keyframes first {
 			0% {
-				transform: translateY(-2%);
-			}
-			50% {
 				transform: translateY(2%);
 			}
+			50% {
+				transform: translateY(6%);
+			}
 			100% {
-				transform: translateY(-2%);
+				transform: translateY(2%);
 			}
 		}
 		@keyframes second {
@@ -225,7 +225,7 @@
 				transform: translateY(-6%);
 			}
 			50% {
-				transform: translateY(-2%);
+				transform: translateY(0%);
 			}
 			100% {
 				transform: translateY(-6%);
@@ -236,7 +236,7 @@
 				transform: translateY(-4%);
 			}
 			50% {
-				transform: translateY(-6%);
+				transform: translateY(-10%);
 			}
 			100% {
 				transform: translateY(-4%);
