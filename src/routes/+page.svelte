@@ -72,13 +72,20 @@
 	<div class="m-auto hidden sm:block sm:max-h-screen">
 		{#if browser}
 			{#each fragments as row, y}
-				<div class="flex h-1/3 w-1/3">
+				<div class="rows flex h-1/3 w-1/3">
 					{#each row as fragment, x}
-						<div class="-mt-[calc(15% + 10px)] w-1/3 min-w-16">
+						<div class={`-mt-[calc(15% + 10px)] cols w-1/3 min-w-16`}>
 							{#if (x === 0 && y === 1) || (x === 2 && y === 2) || (x === 2 && y === 0)}
 								<!-- cool no signal crts, give them each a unique id by adding row and col so we can offset them slightly -->
 								<Crt>
-									<div class={`no-signal no-signal-${x + y}`}></div>
+									<div class="no-signal">
+										<canvas
+											bind:this={fragment}
+											width={200}
+											height={200}
+											class="aspect-square w-full"
+										/>
+									</div>
 								</Crt>
 							{:else if !(x === 2 && y === 0)}
 								<!-- the rain fragments-->
@@ -111,36 +118,129 @@
 	canvas {
 		@apply aspect-square w-full;
 	}
+
+	/* crt effects */
 	.no-signal {
 		@apply inset-full h-[150%] w-[150%];
 		background: url('/no_signal.png');
 	}
-	.no-signal-1 {
-		animation: shift 0.53s infinite steps(6);
-		@apply invert;
-	}
-	.no-signal-2 {
-		animation: shift 0.15s infinite steps(2);
+
+	.rows:nth-child(3) > .cols:nth-child(3) .no-signal {
+		animation:
+			shift-static 0.15s infinite steps(2),
+			flicker 3s infinite steps(6);
 		@apply -scale-x-100 -scale-y-100;
 	}
-	.no-signal-4 {
-		animation: shift 1.01s infinite steps(6);
+	.rows:nth-child(1) > .cols:nth-child(3) .no-signal {
+		animation:
+			shift-static 1.01s infinite steps(6),
+			flicker 12s infinite steps(6);
 		@apply -scale-x-100;
 		animation-direction: reverse;
 	}
+	.rows:nth-child(2) > .cols:nth-child(1) .no-signal {
+		animation:
+			shift-static 0.53s infinite steps(6),
+			flicker 5s infinite steps(6);
+		@apply invert;
+	}
+
 	@media (prefers-reduced-motion) {
 		.no-signal {
 			animation: none;
 		}
 	}
 
-	@keyframes shift {
-		0% {
-			transform: translateX(-10%) translateY(-10%);
+	@media not (prefers-reduced-motion) {
+		@keyframes shift-static {
+			0% {
+				transform: translateX(-10%) translateY(-10%);
+			}
+
+			100% {
+				transform: translateX(-5%) translateY(2%);
+			}
 		}
 
-		100% {
-			transform: translateX(-5%) translateY(2%);
+		@keyframes flicker {
+			0% {
+				opacity: 0.8;
+			}
+			49% {
+				opacity: 0.8;
+			}
+			50% {
+				opacity: 0.5;
+			}
+			51% {
+				opacity: 0.8;
+			}
+			60% {
+				opacity: 0.4;
+			}
+			70% {
+				opacity: 0.8;
+			}
+			100% {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	/* offset the crts so they aren't in a perfect grid, and make each column slightly float up and down with a little offset from each other */
+	.cols:nth-child(1) {
+		@apply translate-y-2;
+		animation: first 2s infinite steps(2);
+	}
+	.cols:nth-child(2) {
+		@apply translate-y-6;
+		animation: second 4s infinite steps(2) reverse;
+	}
+	.cols:nth-child(3) {
+		@apply -translate-y-4;
+		animation: third 3s infinite steps(2);
+	}
+	.rows:nth-child(1) > .cols:nth-child(1) {
+		@apply -translate-y-2
+	}
+	.rows:nth-child(3) > .cols:nth-child(3) {
+		@apply translate-y-2;
+		animation: third 3s infinite steps(2);
+	}
+
+	@media not (prefers-reduced-motion) {
+		@keyframes first {
+			0% {
+				transform: translateY(-2%);
+			}
+			50% {
+				transform: translateY(2%);
+			}
+			100% {
+				transform: translateY(-2%);
+			}
+		}
+		@keyframes second {
+			0% {
+				transform: translateY(-6%);
+			}
+			50% {
+				transform: translateY(-2%);
+			}
+			100% {
+				transform: translateY(-6%);
+			}
+		}
+		@keyframes third {
+			0% {
+				transform: translateY(-4%);
+			}
+			50% {
+				transform: translateY(-6%);
+			}
+			100% {
+				transform: translateY(-4%);
+			}
 		}
 	}
 </style>
