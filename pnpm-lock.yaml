@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@emeraldsnorlax/pp-fonts':
+    specifier: ^6.2.0
+    version: 6.2.0
   '@playwright/test':
     specifier: ^1.28.1
     version: 1.41.2
@@ -140,6 +143,10 @@ packages:
   /@csstools/sass-import-resolve@1.0.0:
     resolution: {integrity: sha512-pH4KCsbtBLLe7eqUrw8brcuFO8IZlN36JjdKlOublibVdAIPHCzEnpBWOVUXK5sCf+DpBi8ZtuWtjF0srybdeA==}
     engines: {node: '>=4.0.0'}
+    dev: true
+
+  /@emeraldsnorlax/pp-fonts@6.2.0:
+    resolution: {integrity: sha512-Kz5vkSDq+EhqTiWbVaITlxDamqZQC9GCzZgOUd77qmCVXm3eEjP39DYu+ZmN3NQoGgodkvohUyx06cg+IeEHxw==, tarball: https://npm.pkg.github.com/download/@emeraldsnorlax/pp-fonts/6.2.0/f50bdf5f8becd44aa07b7fb7070716470708c4c2}
     dev: true
 
   /@esbuild/aix-ppc64@0.19.12:

@@ -3,7 +3,10 @@ const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		fontFamily: {
+			'sans': ['NeueBit', 'sans-serif'],
+			'serif': ['Mondwest', 'serif'],
+		}
 	},
 
 	plugins: []
