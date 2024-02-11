@@ -17,11 +17,19 @@
 				I'm <b>Rain</b> <span class="font-sans text-gray-50">(they/them)</span>, a bad web and
 				full-stack developer that likes Svelte.
 			</p>
+			<br>
 			<p>
 				You can find me writing <a rel="noopener" href="https://github.com/EmeraldSnorlax"
 					>code on GitHub</a
 				>, posting <a href="/blog">on my blog</a>, and playing
 				<a rel="noopener" href="https://steamcommunity.com/id/EmeraldSnorlax">games on Steam</a>.
+			</p>
+			<br>
+			<p>
+				If you want to talk, I'm <b>rain.lgbt</b> on Discord.
+			</p>
+			<p>
+				Or you can send me email at <a href="mailto:emeraldsnorlax@disroot.org">emeraldsnorlax@disroot.org</a>.
 			</p>
 		</div>
 	</div>
