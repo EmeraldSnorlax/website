@@ -11,8 +11,39 @@
 /* very distracting effects; both lofi and motion. */
 @custom-media --distracting (--lofi) and (--motion);
 
+@layer utilities {
+	.window {
+		@apply p-4 border-4 border-t-[2rem] border-gray-300 relative -z-10;
+	}
+	.window::after {
+		@apply content-[''] block absolute top-0 -translate-y-[1.5rem] right-0 h-[calc(1rem-1px)] aspect-square bg-red-100;
+
+	}
+}
+
 body {
 	background: rgb(30, 40, 40);
+}
+
+h1 {
+	@apply mb-2 font-sans text-5xl font-bold text-white lg:text-7xl;
+	text-shadow:
+		0.5px 0 1px rgba(0, 30, 255, 0.5),
+		-0.5px 0 1px rgba(255, 0, 80, 0.3),
+		0 0 3px;
+}
+p {
+	@apply font-serif text-gray-200 text-lg;
+}
+a {
+	@apply text-red-600 underline underline-offset-2 relative;
+	text-shadow:
+		0.5px 0 1px rgba(0, 30, 255, 0.5),
+		-0.5px 0 1px rgba(255, 0, 80, 0.3),
+		0 0 3px;
+}
+a:hover {
+	@apply text-red-800 underline transition-all;
 }
 
 @media (--lofi) {

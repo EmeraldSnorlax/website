@@ -11,7 +11,7 @@
 				<CrtGrid />
 			</div>
 		</div>
-		<div class="col-span-3 col-start-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center">
+		<div class="col-span-3 col-start-6 lg:flex lg:my-auto lg:flex-col lg:justify-center bg-stone-950 window">
 			<h1>Hello, chat.</h1>
 			<p>
 				I'm <b>Rain</b> <span class="font-sans text-gray-50">(they/them)</span>, a bad web and
@@ -34,28 +34,5 @@
 			image-rendering: pixelated;
 			@apply bg-cover;
 		}
-	}
-	h1 {
-		@apply mb-2 font-sans text-5xl font-bold text-white lg:text-7xl;
-		text-shadow:
-			0.5px 0 1px rgba(0, 30, 255, 0.5),
-			-0.5px 0 1px rgba(255, 0, 80, 0.3),
-			0 0 3px;
-	}
-	p {
-		@apply font-serif text-2xl text-gray-200;
-	}
-	a {
-		@apply text-red-600 underline underline-offset-2;
-		text-shadow:
-			0.5px 0 1px rgba(0, 30, 255, 0.5),
-			-0.5px 0 1px rgba(255, 0, 80, 0.3),
-			0 0 3px;
-	}
-	a:hover {
-		@apply text-red-800 underline transition-all;
-	}
-	a::after {
-		content: '';
 	}
 </style>
