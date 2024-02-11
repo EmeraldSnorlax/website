@@ -2,10 +2,6 @@
 	import CrtGrid from './CrtGrid.svelte';
 </script>
 
-<svelte:head>
-	<link rel="preload" media="not (prefers-reduced-motion)" as="image" href="/bg/180.apng" />
-</svelte:head>
-
 <main class="mt-16 h-full min-h-screen px-8 lg:mt-0">
 	<div
 		class="m-auto w-2/3 lg:grid lg:h-full lg:min-h-screen lg:w-auto lg:grid-cols-9 lg:grid-rows-1 lg:gap-4"
@@ -61,7 +57,5 @@
 	}
 	a::after {
 		content: '';
-	}
-	* {
 	}
 </style>

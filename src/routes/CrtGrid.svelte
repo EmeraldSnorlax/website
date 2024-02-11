@@ -56,53 +56,49 @@
 </script>
 
 <svelte:head>
-	<link rel="preload" as="image" href="/av/body.webp" />
-	<link rel="preload" as="image" href="/av/hair.webp" />
-	<link rel="preload" as="image" href="/av/eyes-011.webp" />
-	<link rel="preload" as="image" href="/av/mouth-009.webp" />
-	<link rel="preload" as="image" href="/av/eyebrows-001.webp" />
-	<link rel="preload" as="image" href="/av/halo-003.webp" />
-	<link rel="preload" as="image" href="/av/outfit-018.webp" />
-	<link rel="preload" as="image" href="/av/glasses.webp" />
-	<link rel="preload" as="image" href="/av/shadow.webp" />
-	<link rel="preload" as="image" href="/no_signal.webp" />
+	<link rel="preload" as="image" href="/no_signal.webp" crossorigin="anonymous" />
+	<link rel="preload" as="image" href="/crt_mask.webp" crossorigin="anonymous" />
 </svelte:head>
 
-<div role="img" class="w-full block" aria-label="rain's avatar: a headshot and upper body. the avatar is a black and white drawing, and is wearing a suit jacket, shirt, blazer, and tie. has a red melting angel halo. rain is slightly frowning. this image is displayed in several fragments across multiple crt displays.">
-				{#if browser}
-					{#each fragments as row, y}
-						<div class="rows flex">
-							{#each row as fragment, x}
-								<div class={`cols w-1/3`}>
-									{#if (x === 0 && y === 1) || (x === 2 && y === 2) || (x === 2 && y === 0)}
-										<!-- cool no signal crts, give them each a unique id by adding row and col so we can offset them slightly -->
-										<Crt>
-											<div class="no-signal">
-												<canvas
-													bind:this={fragment}
-													width={200}
-													height={200}
-													class="aspect-square w-full"
-												/>
-											</div>
-										</Crt>
-									{:else if !(x === 2 && y === 0)}
-										<!-- the rain fragments-->
-										<Crt>
-											<canvas
-												bind:this={fragment}
-												width={200}
-												height={200}
-												class="aspect-square w-full"
-											/>
-										</Crt>
-									{/if}
+<div
+	role="img"
+	class="block w-full"
+	aria-label="rain's avatar: a headshot and upper body. the avatar is a black and white drawing, and is wearing a suit jacket, shirt, blazer, and tie. has a red melting angel halo. rain is slightly frowning. this image is displayed in several fragments across multiple crt displays."
+>
+	{#if browser}
+		{#each fragments as row, y}
+			<div class="rows flex">
+				{#each row as fragment, x}
+					<div class={`cols w-1/3`}>
+						{#if (x === 0 && y === 1) || (x === 2 && y === 2) || (x === 2 && y === 0)}
+							<!-- cool no signal crts, give them each a unique id by adding row and col so we can offset them slightly -->
+							<Crt>
+								<div class="no-signal">
+									<canvas
+										bind:this={fragment}
+										width={200}
+										height={200}
+										class="aspect-square w-full"
+									/>
 								</div>
-							{/each}
-						</div>
-					{/each}
-				{/if}
-		</div>
+							</Crt>
+						{:else if !(x === 2 && y === 0)}
+							<!-- the rain fragments-->
+							<Crt>
+								<canvas
+									bind:this={fragment}
+									width={200}
+									height={200}
+									class="aspect-square w-full"
+								/>
+							</Crt>
+						{/if}
+					</div>
+				{/each}
+			</div>
+		{/each}
+	{/if}
+</div>
 
 <style lang="postcss">
 	canvas {
@@ -191,7 +187,7 @@
 		animation: third 3s infinite steps(2);
 	}
 	.rows:nth-child(1) > .cols:nth-child(1) {
-		@apply -translate-y-2
+		@apply -translate-y-2;
 	}
 	.rows:nth-child(3) > .cols:nth-child(3) {
 		@apply translate-y-2;
@@ -234,4 +230,3 @@
 		}
 	}
 </style>
-
