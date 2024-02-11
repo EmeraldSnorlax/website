@@ -11,25 +11,29 @@
 				<CrtGrid />
 			</div>
 		</div>
-		<div class="col-span-3 col-start-6 lg:flex lg:my-auto lg:flex-col lg:justify-center bg-gray-800 window">
+		<div
+			class="window col-span-3 col-start-6 bg-gray-800 lg:my-auto lg:flex lg:flex-col lg:justify-center"
+		>
 			<h1>Hello, chat.</h1>
 			<p>
 				I'm <b>Rain</b> <span class="font-sans text-gray-50">(they/them)</span>, a bad web and
 				full-stack developer that likes Svelte.
 			</p>
-			<br>
+			<br />
 			<p>
 				You can find me writing <a rel="noopener" href="https://github.com/EmeraldSnorlax"
 					>code on GitHub</a
-				>, posting <a href="/blog">on my blog</a>, and playing
-				<a rel="noopener" href="https://steamcommunity.com/id/EmeraldSnorlax">games on Steam</a>.
+				>, posting <a href="/blog">on my blog</a>, and playing games
+				<a rel="noopener" href="https://steamcommunity.com/id/EmeraldSnorlax">on Steam</a>.
 			</p>
-			<br>
+			<br />
 			<p>
 				If you want to talk, I'm <b>rain.lgbt</b> on Discord.
 			</p>
 			<p>
-				Or you can send me email at <a href="mailto:emeraldsnorlax@disroot.org">emeraldsnorlax@disroot.org</a>.
+				Or you can send me email at <a href="mailto:emeraldsnorlax@disroot.org"
+					>emeraldsnorlax@disroot.org</a
+				>.
 			</p>
 		</div>
 	</div>
@@ -57,5 +61,4 @@
 			animation: bob 5s infinite steps(6);
 		}
 	}
-
 </style>
