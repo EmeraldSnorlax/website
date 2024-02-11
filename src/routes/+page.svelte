@@ -11,7 +11,7 @@
 				<CrtGrid />
 			</div>
 		</div>
-		<div class="col-span-3 col-start-6 lg:flex lg:my-auto lg:flex-col lg:justify-center bg-stone-950 window">
+		<div class="col-span-3 col-start-6 lg:flex lg:my-auto lg:flex-col lg:justify-center bg-gray-800 window">
 			<h1>Hello, chat.</h1>
 			<p>
 				I'm <b>Rain</b> <span class="font-sans text-gray-50">(they/them)</span>, a bad web and
