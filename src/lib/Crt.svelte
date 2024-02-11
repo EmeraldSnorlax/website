@@ -1,4 +1,4 @@
-<div class="relative aspect-square h-full w-full overflow-clip">
+<div class="relative aspect-square h-full w-full overflow-clip -mb-4">
 	<div class="frame-inner relative m-auto aspect-square">
 		<slot />
 	</div>
@@ -24,5 +24,6 @@
 	.frame-inner {
 		background: radial-gradient(circle, rgba(5, 17, 30, 1) 0%, rgba(148, 24, 24, 1) 100%);
 		container-type: size;
+		@apply h-full w-full;
 	}
 </style>

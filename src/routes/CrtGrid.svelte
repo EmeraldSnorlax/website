@@ -55,6 +55,18 @@
 	}
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/av/body.png" />
+	<link rel="preload" as="image" href="/av/hair.png" />
+	<link rel="preload" as="image" href="/av/eyes-011.png" />
+	<link rel="preload" as="image" href="/av/mouth-009.png" />
+	<link rel="preload" as="image" href="/av/eyebrows-001.png" />
+	<link rel="preload" as="image" href="/av/halo-003.png" />
+	<link rel="preload" as="image" href="/av/outfit-018.png" />
+	<link rel="preload" as="image" href="/av/glasses.png" />
+	<link rel="preload" as="image" href="/av/shadow.png" />
+</svelte:head>
+
 <div role="img" class="w-full h-full" aria-label="rain's avatar: a headshot and upper body. the avatar is a black and white drawing, and is wearing a suit jacket, shirt, blazer, and tie. has a red melting angel halo. rain is slightly frowning. this image is displayed in several fragments across multiple crt displays.">
 				{#if browser}
 					{#each fragments as row, y}
