@@ -31,7 +31,7 @@
 				If you want to talk, I'm <b>rain.lgbt</b> on Discord.
 			</p>
 			<p>
-				Or you can send me email at <a href="mailto:emeraldsnorlax@disroot.org"
+				Or you can send me an email at <a href="mailto:emeraldsnorlax@disroot.org"
 					>emeraldsnorlax@disroot.org</a
 				>.
 			</p>
