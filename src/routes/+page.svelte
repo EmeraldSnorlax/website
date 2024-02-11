@@ -34,5 +34,20 @@
 			image-rendering: pixelated;
 			@apply bg-cover;
 		}
+		@keyframes bob {
+			0% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(-0.25rem);
+			}
+			100% {
+				transform: translateY(0);
+			}
+		}
+		.window {
+			animation: bob 5s infinite steps(6);
+		}
 	}
+
 </style>

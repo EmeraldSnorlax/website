@@ -13,7 +13,7 @@
 
 @layer utilities {
 	.window {
-		@apply p-4 border-4 border-t-[2rem] border-gray-300 relative -z-10;
+		@apply p-4 border-4 border-t-[2rem] border-gray-300 relative;
 	}
 	.window::after {
 		@apply content-[''] block absolute top-0 -translate-y-[1.5rem] right-0 h-[calc(1rem-1px)] aspect-square bg-red-100;
@@ -72,7 +72,7 @@ a:hover {
 	body::before {
 		background: url('/noise.webp');
 		background-size: 10%;
-		@apply h-[120%] w-[120%] fixed top-0 left-0 opacity-90 pointer-events-none;
+		@apply h-[120%] w-[120%] fixed top-0 left-0 opacity-90 pointer-events-none z-30;
 		content: '';
 		animation: grain 7s steps(6) infinite;
 		image-rendering: pixelated;
