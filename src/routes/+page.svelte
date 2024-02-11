@@ -4,15 +4,6 @@
 
 <svelte:head>
 	<link rel="preload" media="not (prefers-reduced-motion)" as="image" href="/bg/180.apng" />
-	<link rel="preload" as="image" href="/av/body.png" />
-	<link rel="preload" as="image" href="/av/hair.png" />
-	<link rel="preload" as="image" href="/av/eyes-011.png" />
-	<link rel="preload" as="image" href="/av/mouth-009.png" />
-	<link rel="preload" as="image" href="/av/eyebrows-001.png" />
-	<link rel="preload" as="image" href="/av/halo-003.png" />
-	<link rel="preload" as="image" href="/av/outfit-018.png" />
-	<link rel="preload" as="image" href="/av/glasses.png" />
-	<link rel="preload" as="image" href="/av/shadow.png" />
 </svelte:head>
 
 <main class="min-h-screen px-8">
