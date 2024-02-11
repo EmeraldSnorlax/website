@@ -15,7 +15,7 @@
 	.frame-inner,
 	.frame-inner::after {
 		/* mask to the slight curved shape. */
-		mask-image: url('/crt_mask.png');
+		mask-image: url('/crt_mask.webp');
 		/* i don't know WHY THE FUCK this is needed, or even what these numbers mean, but here we are. */
 		mask-size: 125%;
 		mask-position: center 22.5%;

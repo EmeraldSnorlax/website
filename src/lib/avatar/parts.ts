@@ -50,15 +50,15 @@ export function loadParts(): Promise<{ [id: string]: Part }> {
   }
   // Parts that we want to load and use.
   const parts = {
-    'body': loadPart('/av/body.png', 'body', 'body'),
-    'shadow': loadPart('/av/shadow.png', 'shadow', 'shadow'),
-    'hair': loadPart('/av/hair.png', 'hair', 'hair'),
-    'glasses': loadPart('/av/glasses.png', 'glasses', 'glasses'),
-    'eyebrows-001': loadPart('/av/eyebrows-001.png', 'eyebrows', 'eyebrows-001'),
-    'mouth-009': loadPart('/av/mouth-009.png', 'mouth', 'mouth-009'),
-    'outfit-018': loadPart('/av/outfit-018.png', 'outfit', 'outfit-018'),
-    'halo-003': loadPart('/av/halo-003.png', 'halo', 'halo-003'),
-    'eyes-011': loadPart('av/eyes-011.png', 'eyes', 'eyes-011'),
+    'body': loadPart('/av/body.webp', 'body', 'body'),
+    'shadow': loadPart('/av/shadow.webp', 'shadow', 'shadow'),
+    'hair': loadPart('/av/hair.webp', 'hair', 'hair'),
+    'glasses': loadPart('/av/glasses.webp', 'glasses', 'glasses'),
+    'eyebrows-001': loadPart('/av/eyebrows-001.webp', 'eyebrows', 'eyebrows-001'),
+    'mouth-009': loadPart('/av/mouth-009.webp', 'mouth', 'mouth-009'),
+    'outfit-018': loadPart('/av/outfit-018.webp', 'outfit', 'outfit-018'),
+    'halo-003': loadPart('/av/halo-003.webp', 'halo', 'halo-003'),
+    'eyes-011': loadPart('av/eyes-011.webp', 'eyes', 'eyes-011'),
   }
 
   return Promise.all(Object.entries(parts).map(([id, partPromise]) => partPromise.then(part => [id, part])))
