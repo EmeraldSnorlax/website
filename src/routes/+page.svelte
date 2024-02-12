@@ -2,17 +2,19 @@
 	import CrtGrid from './CrtGrid.svelte';
 </script>
 
-<main class="mt-16 h-full min-h-screen px-8 lg:mt-0">
+<main class="mt-16 h-full min-h-screen lg:mt-0 lg:px-8">
 	<div
-		class="m-auto w-2/3 lg:grid lg:h-full lg:min-h-screen lg:w-auto lg:grid-cols-9 lg:grid-rows-1 lg:gap-4"
+		class="mx-4 lg:m-auto lg:grid lg:h-full lg:min-h-screen lg:w-auto lg:grid-cols-9 lg:grid-rows-1 lg:gap-4"
 	>
-		<div class="max-w-128 lg:sticky lg:top-0 lg:col-span-3 lg:col-start-2 lg:h-screen lg:w-full">
+		<div
+			class="mx-auto mb-8 w-2/3 sm:w-2/5 lg:sticky lg:top-0 lg:col-span-3 lg:col-start-2 lg:mx-auto lg:mb-auto lg:h-screen lg:w-full"
+		>
 			<div class="flex h-full items-center">
 				<CrtGrid />
 			</div>
 		</div>
 		<div
-			class="window col-span-3 col-start-6 bg-gray-800 lg:my-auto lg:flex lg:flex-col lg:justify-center"
+			class="window max-w-prose lg:max-w-none mx-auto col-span-3 col-start-6 bg-teal-950 p-2 lg:my-auto lg:flex lg:flex-col lg:justify-center"
 		>
 			<h1>Hello, chat.</h1>
 			<p>
@@ -31,9 +33,7 @@
 				If you want to talk, I'm <b>rain.lgbt</b> on Discord.
 			</p>
 			<p>
-				Or you can send me an email at <a href="mailto:emeraldsnorlax@disroot.org"
-					>emeraldsnorlax@disroot.org</a
-				>.
+				Or you can <a href="mailto:emeraldsnorlax@disroot.org">send me an email.</a>.
 			</p>
 		</div>
 	</div>
