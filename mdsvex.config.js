@@ -1,5 +1,6 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import { derunt } from './remark/derunt.js';
+import rehypeShiki from '@shikijs/rehype'
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
@@ -12,7 +13,7 @@ const config = defineConfig({
 	},
 
 	remarkPlugins: [derunt],
-	rehypePlugins: []
+	rehypePlugins: [rehypeShiki({ theme: 'vesper' })]
 });
 
 export default config;

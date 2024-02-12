@@ -8,7 +8,7 @@
   * @example 'eyes' // *one* pair of eyes.
   * @example 'mouth' // *one* mouth.
 */
-type PartType = 'shadow' | 'halo' | 'hair' | 'pupils' | 'outfit' | 'mark' | 'eyebrows' | 'mouth' | 'eyes' | 'glasses' | 'body';
+type PartType = 'shadow' | 'halo' | 'hair' | 'pupils' | 'outfit' | 'mark' | 'eyebrows' | 'mouth' | 'eyes' | 'glasses' | 'body' | '';
 
 /**
  * A part of the avatar.
@@ -28,7 +28,7 @@ function loadImage(src: string): Promise<HTMLImageElement> {
   });
 }
 
-async function loadPart(src: string, type: PartType, id: string): Promise<Part> {
+export async function loadPart(src: string, type: PartType, id: string): Promise<Part> {
   const image = await loadImage(src);
   return { image, type, id };
 }
