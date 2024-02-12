@@ -33,7 +33,7 @@
 				If you want to talk, I'm <b>rain.lgbt</b> on Discord.
 			</p>
 			<p>
-				Or you can <a href="mailto:emeraldsnorlax@disroot.org">send me an email.</a>.
+				Or you can <a href="mailto:emeraldsnorlax@disroot.org">send me an email</a>.
 			</p>
 		</div>
 	</div>
