@@ -11,6 +11,5 @@
 <svelte:head>
 	<link rel="preload" href={mondwestUrl} as="font" type="font/woff2" crossorigin="anonymous"/>
 	<link rel="preload" href={neueBitBoldUrl} as="font" type="font/woff2" crossorigin="anonymous"/>
-	<link rel="preload" href={neueBitBoldUrl} as="font" type="font/woff2" crossorigin="anonymous"/>
 </svelte:head>
 <slot />

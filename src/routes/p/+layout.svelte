@@ -4,6 +4,9 @@
 	import { draw } from '$lib/avatar';
 	import { loadPart, loadParts } from '$lib/avatar/parts';
 	import { onMount } from 'svelte';
+
+  import neueBitUrl from '@emeraldsnorlax/pp-fonts/NeueBit/Regular.woff2?url';
+
 	let canvas: HTMLCanvasElement;
 
 	async function rainUnhover(canvas: HTMLCanvasElement) {
@@ -44,6 +47,8 @@
 		rainUnhover(canvas);
 	});
 </script>
+
+<link rel="preload" href={neueBitUrl} as="font" type="font/woff2" crossorigin="anonymous"/>
 
 <div class="mx-auto max-w-3xl">
 	<nav class="window mx-8 my-2 bg-teal-900">
