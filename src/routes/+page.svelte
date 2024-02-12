@@ -25,7 +25,7 @@
 			<p>
 				You can find me writing <a rel="noopener" href="https://github.com/EmeraldSnorlax"
 					>code on GitHub</a
-				>, posting <a href="/blog">on my blog</a>, and playing games
+				>, posting <a href="/p">articles</a>, and playing games
 				<a rel="noopener" href="https://steamcommunity.com/id/EmeraldSnorlax">on Steam</a>.
 			</p>
 			<br />
@@ -41,7 +41,7 @@
 
 <style lang="postcss">
 	@media not (prefers-reduced-motion) {
-		:global(body) {
+		main {
 			background: url('/bg/180.apng') fixed;
 			image-rendering: pixelated;
 			@apply bg-cover;
