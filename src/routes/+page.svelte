@@ -2,7 +2,7 @@
 	import CrtGrid from './CrtGrid.svelte';
 </script>
 
-<main class="mt-16 h-full min-h-screen lg:mt-0 lg:px-8">
+<main class="pt-16 h-full min-h-screen lg:pt-0 lg:px-8">
 	<div
 		class="mx-4 lg:m-auto lg:grid lg:h-full lg:min-h-screen lg:w-auto lg:grid-cols-9 lg:grid-rows-1 lg:gap-4"
 	>
