@@ -36,13 +36,13 @@ p {
 	@apply font-serif text-gray-200 lg:text-lg;
 }
 a {
-	@apply text-red-400 underline underline-offset-2 relative;
+	@apply text-red-400 underline underline-offset-2;
 	text-shadow:
 		0.5px 0 1px rgba(0, 30, 255, 0.5),
 		-0.5px 0 1px rgba(255, 0, 80, 0.3),
 		0 0 3px;
 }
-a:hover {
+a:hover, a:focus {
 	@apply text-red-800 underline transition-all;
 }
 
@@ -52,7 +52,7 @@ a:hover {
 	.vignette::after {
 		content: '';
 		@apply pointer-events-none fixed left-0 top-0 h-full w-full;
-		background: radial-gradient(ellipse at center, rgba(0, 0, 0, 20%) 66%, black 100%);
+		background: radial-gradient(ellipse at center, rgba(0, 0, 0, 10%) 80%, black 100%);
 		z-index: 30;
 	}
 	/* scanlines */
