@@ -2,21 +2,23 @@
 	import CrtGrid from './CrtGrid.svelte';
 </script>
 
-<main class="pt-16 h-full min-h-screen lg:pt-0 lg:px-8">
+<main class="h-full min-h-screen pt-16 lg:px-8 lg:pt-0">
 	<div
-		class="mx-4 min-h-[40vh] h-[40vh] lg:m-auto lg:grid lg:h-full lg:min-h-screen lg:w-auto lg:grid-cols-9 lg:grid-rows-1 lg:gap-4"
+		class="mx-4 h-[40vh] min-h-[40vh] lg:m-auto lg:grid lg:h-full lg:min-h-screen lg:w-auto lg:grid-cols-9 lg:grid-rows-1 lg:gap-4"
 	>
 		<div
-			class="mx-auto h-full mb-8 w-2/3 sm:w-2/5 lg:sticky lg:top-0 lg:col-span-3 lg:col-start-2 lg:mx-auto lg:mb-auto lg:h-screen lg:w-full"
+			class="mx-auto mb-8 h-full w-2/3 sm:w-2/5 lg:sticky lg:top-0 lg:col-span-3 lg:col-start-2 lg:mx-auto lg:mb-auto lg:h-screen lg:w-full"
 		>
 			<div class="flex h-full items-center">
 				<CrtGrid />
 			</div>
 		</div>
 		<div
-			class="window w-full max-w-prose lg:max-w-none mx-auto col-span-3 col-start-6 bg-teal-950 p-2 lg:my-auto lg:flex lg:flex-col lg:justify-center"
+			class="window col-span-3 col-start-6 mx-auto w-full max-w-prose bg-teal-950 p-2 lg:my-auto lg:flex lg:max-w-none lg:flex-col lg:justify-center"
 		>
-			<h1>Hello, chat.</h1>
+			<h1 class="fuzzy-text mb-2 font-sans text-4xl font-bold text-white lg:text-7xl">
+				Hello, chat.
+			</h1>
 			<p>
 				I'm <b>Rain</b> <span class="font-sans text-gray-50">(they/them)</span>, a bad web and
 				full-stack developer that likes Svelte.
@@ -59,6 +61,9 @@
 		}
 		.window {
 			animation: bob 5s infinite steps(6);
+		}
+		a {
+			@apply link;
 		}
 	}
 </style>

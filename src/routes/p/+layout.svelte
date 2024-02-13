@@ -5,7 +5,7 @@
 	import { loadPart, loadParts } from '$lib/avatar/parts';
 	import { onMount } from 'svelte';
 
-  import neueBitUrl from '@emeraldsnorlax/pp-fonts/NeueBit/Regular.woff2?url';
+	import neueBitUrl from '@emeraldsnorlax/pp-fonts/NeueBit/Regular.woff2?url';
 
 	let canvas: HTMLCanvasElement;
 
@@ -56,10 +56,10 @@
 	});
 </script>
 
-<link rel="preload" href={neueBitUrl} as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" href={neueBitUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 
 <div>
-	<nav class="mx-8 my-2 mx-auto max-w-3xl">
+	<nav class="mx-auto my-2 max-w-3xl">
 		<ul class="flex flex-col items-center justify-between sm:flex-row sm:items-end">
 			<li>
 				<a
@@ -106,3 +106,9 @@
 		}
 	</style>
 </noscript>
+
+<style lang="postcss">
+	a {
+		@apply link;
+	}
+</style>
