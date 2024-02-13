@@ -55,11 +55,6 @@
 	}
 </script>
 
-<svelte:head>
-	<link rel="preload" as="image" href="/no_signal.webp" crossorigin="anonymous" />
-	<link rel="preload" as="image" href="/crt_mask.webp" crossorigin="anonymous" />
-</svelte:head>
-
 <div
 	role="img"
 	class="block w-full"
