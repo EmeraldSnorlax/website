@@ -58,7 +58,7 @@ export function loadParts(): Promise<{ [id: string]: Part }> {
     'mouth-009': loadPart('/av/mouth-009.webp', 'mouth', 'mouth-009'),
     'outfit-018': loadPart('/av/outfit-018.webp', 'outfit', 'outfit-018'),
     'halo-003': loadPart('/av/halo-003.webp', 'halo', 'halo-003'),
-    'eyes-011': loadPart('av/eyes-011.webp', 'eyes', 'eyes-011'),
+    'eyes-011': loadPart('/av/eyes-011.webp', 'eyes', 'eyes-011'),
   }
 
   return Promise.all(Object.entries(parts).map(([id, partPromise]) => partPromise.then(part => [id, part])))
