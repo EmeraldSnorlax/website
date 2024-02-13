@@ -13,7 +13,7 @@ const config = defineConfig({
 	},
 
 	remarkPlugins: [derunt],
-	rehypePlugins: [rehypeShiki({ theme: 'vesper' })]
+	rehypePlugins: [],
 });
 
 export default config;

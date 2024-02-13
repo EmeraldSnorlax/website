@@ -50,8 +50,8 @@
 
 <link rel="preload" href={neueBitUrl} as="font" type="font/woff2" crossorigin="anonymous"/>
 
-<div class="mx-auto max-w-3xl">
-	<nav class="window mx-8 my-2 bg-teal-900">
+<div>
+	<nav class="mx-8 my-2 mx-auto max-w-3xl">
 		<ul class="flex flex-col items-center justify-between sm:flex-row sm:items-end">
 			<li>
 				<a
@@ -81,13 +81,8 @@
 					<span class="block text-xl font-bold sm:text-2xl">Rain's scribbles</span>
 				</a>
 			</li>
-			<li>
-				<a href="/p/newest" class="window flex flex-col bg-teal-950">
-					<span class="block text-xl sm:text-2xl">Newest post</span></a
-				>
-			</li>
-			<li>
-				<a href="/" class="window flex flex-col bg-red-950">
+			<li class="mt-4">
+				<a href="/" class="sm:window flex flex-col sm:bg-red-950">
 					<span class="block text-xl sm:text-2xl">About Rain</span></a
 				>
 			</li>

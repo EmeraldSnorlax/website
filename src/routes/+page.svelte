@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div
-			class="window max-w-prose lg:max-w-none mx-auto col-span-3 col-start-6 bg-teal-950 p-2 lg:my-auto lg:flex lg:flex-col lg:justify-center"
+			class="window w-full max-w-prose lg:max-w-none mx-auto col-span-3 col-start-6 bg-teal-950 p-2 lg:my-auto lg:flex lg:flex-col lg:justify-center"
 		>
 			<h1>Hello, chat.</h1>
 			<p>

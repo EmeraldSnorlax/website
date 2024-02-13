@@ -7,6 +7,22 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
+		interface MdsvexFile {
+			default: import('svelte/internal').SvelteComponent;
+			metadata: Record<string, string>;
+		}
+		interface Post {
+			/** slug as it appears in the url. same as file path. */
+			slug: string;
+			/** full title of the post */
+			title: string;
+			/** date of the post */
+			date: Date;
+			/** one or two line description of the post for social embeds */
+			description: string;
+			/** tags for the post */
+			tags?: string[];
+		}
 	}
 }
 
