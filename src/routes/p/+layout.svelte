@@ -29,14 +29,22 @@
 	async function rainHover(canvas: HTMLCanvasElement) {
 		const ctx = canvas.getContext('2d');
 		if (!ctx || !browser) return;
-		const parts = await loadParts();
+
+		// Fetch all the parts in parallel
+		const [parts, additionalParts] = await Promise.all([
+			loadParts(),
+			Promise.all([
+				loadPart('/av/eyes-009.webp', 'eyes', 'eyes-009'),
+				loadPart('/av/mouth-010.webp', 'mouth', 'mouth-010'),
+				loadPart('/av/eyebrows-000.webp', 'eyebrows', 'eyebrows-000'),
+				loadPart('/av/halo-002.webp', 'halo', 'halo-002')
+			])
+		]);
+
 		draw(ctx, [
 			parts.body,
 			parts.hair,
-			await loadPart('/av/eyes-009.webp', 'eyes', 'eyes-009'),
-			await loadPart('/av/mouth-010.webp', 'mouth', 'mouth-010'),
-			await loadPart('/av/eyebrows-000.webp', 'eyebrows', 'eyebrows-000'),
-			await loadPart('/av/halo-002.webp', 'halo', 'halo-002'),
+			...additionalParts,
 			parts['outfit-018'],
 			parts.glasses,
 			parts.shadow
