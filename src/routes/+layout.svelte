@@ -1,5 +1,6 @@
 <script>
 	import '../app.pcss';
+	import '../typography.pcss';
 	import '@emeraldsnorlax/pp-fonts/Mondwest';
 	import '@emeraldsnorlax/pp-fonts/NeueBit';
 	import mondwestUrl from '@emeraldsnorlax/pp-fonts/Mondwest/Regular.woff2?url';

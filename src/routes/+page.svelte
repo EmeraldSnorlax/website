@@ -4,10 +4,10 @@
 
 <main class="pt-16 h-full min-h-screen lg:pt-0 lg:px-8">
 	<div
-		class="mx-4 lg:m-auto lg:grid lg:h-full lg:min-h-screen lg:w-auto lg:grid-cols-9 lg:grid-rows-1 lg:gap-4"
+		class="mx-4 min-h-[40vh] h-[40vh] lg:m-auto lg:grid lg:h-full lg:min-h-screen lg:w-auto lg:grid-cols-9 lg:grid-rows-1 lg:gap-4"
 	>
 		<div
-			class="mx-auto mb-8 w-2/3 sm:w-2/5 lg:sticky lg:top-0 lg:col-span-3 lg:col-start-2 lg:mx-auto lg:mb-auto lg:h-screen lg:w-full"
+			class="mx-auto h-full mb-8 w-2/3 sm:w-2/5 lg:sticky lg:top-0 lg:col-span-3 lg:col-start-2 lg:mx-auto lg:mb-auto lg:h-screen lg:w-full"
 		>
 			<div class="flex h-full items-center">
 				<CrtGrid />

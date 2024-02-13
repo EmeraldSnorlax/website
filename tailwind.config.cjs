@@ -4,8 +4,8 @@ const config = {
 
 	theme: {
 		fontFamily: {
-			'sans': ['NeueBit', 'sans-serif'],
-			'serif': ['Mondwest', 'serif'],
+			'sans': ['NeueBit', "NeueBit Fallback", 'Arial', 'sans-serif'],
+			'serif': ['Mondwest', 'Mondwest Fallback', 'Times New Roman', 'serif'],
 		}
 	},
 
