@@ -58,7 +58,6 @@
 <div
 	role="img"
 	class="block w-full"
-	aria-label="rain's avatar: a headshot and upper body. the avatar is a black and white drawing, and is wearing a suit jacket, shirt, blazer, and tie. has a red melting angel halo. rain is slightly frowning. this image is displayed in several fragments across multiple crt displays."
 >
 	{#if browser}
 		{#each fragments as row, y}

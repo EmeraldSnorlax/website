@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@emeraldsnorlax/pp-fonts':
-    specifier: ^6.2.1
-    version: 6.2.1
+    specifier: ^6.2.3
+    version: 6.2.3
   '@playwright/test':
     specifier: ^1.41.2
     version: 1.41.2
@@ -66,11 +66,11 @@ devDependencies:
     specifier: ^3.2.5
     version: 3.2.5
   prettier-plugin-svelte:
-    specifier: ^3.1.2
-    version: 3.1.2(prettier@3.2.5)(svelte@4.2.10)
+    specifier: ^3.2.0
+    version: 3.2.0(prettier@3.2.5)(svelte@4.2.10)
   prettier-plugin-tailwindcss:
     specifier: ^0.5.11
-    version: 0.5.11(prettier-plugin-svelte@3.1.2)(prettier@3.2.5)
+    version: 0.5.11(prettier-plugin-svelte@3.2.0)(prettier@3.2.5)
   svelte:
     specifier: ^4.2.10
     version: 4.2.10
@@ -171,8 +171,8 @@ packages:
     engines: {node: '>=4.0.0'}
     dev: true
 
-  /@emeraldsnorlax/pp-fonts@6.2.1:
-    resolution: {integrity: sha512-MnRmP20o3f8i9qcg5XgCq2/95P286ZNrQ+Iv5g1HH47699cMXsHTc+47N1pQI7guyfrvuJh13JCMGr+FyYn6zA==, tarball: https://npm.pkg.github.com/download/@emeraldsnorlax/pp-fonts/6.2.1/460b05623a13e36d3728cfc9418334e23868d34f}
+  /@emeraldsnorlax/pp-fonts@6.2.3:
+    resolution: {integrity: sha512-hmsAICeOIzXkoPO0gI5PEhcczngvD3BkCqRqGigsVs6vT3gKW88I9O5JnHcoq755iZXN1XKGRFlPJk0D3Sk0lQ==, tarball: https://npm.pkg.github.com/download/@emeraldsnorlax/pp-fonts/6.2.3/9bff8d71fe7be1a0e1252492e0b328c7e6f35265}
     dev: true
 
   /@esbuild/aix-ppc64@0.19.12:
@@ -1123,7 +1123,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001587
-      electron-to-chromium: 1.4.665
+      electron-to-chromium: 1.4.668
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.3)
     dev: true
@@ -1347,8 +1347,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium@1.4.665:
-    resolution: {integrity: sha512-UpyCWObBoD+nSZgOC2ToaIdZB0r9GhqT2WahPKiSki6ckkSuKhQNso8V2PrFcHBMleI/eqbKgVQgVC4Wni4ilw==}
+  /electron-to-chromium@1.4.668:
+    resolution: {integrity: sha512-ZOBocMYCehr9W31+GpMclR+KBaDZOoAEabLdhpZ8oU1JFDwIaFY0UDbpXVEUFc0BIP2O2Qn3rkfCjQmMR4T/bQ==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -2500,8 +2500,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte@3.1.2(prettier@3.2.5)(svelte@4.2.10):
-    resolution: {integrity: sha512-7xfMZtwgAWHMT0iZc8jN4o65zgbAQ3+O32V6W7pXrqNvKnHnkoyQCGCbKeUyXKZLbYE0YhFRnamfxfkEGxm8qA==}
+  /prettier-plugin-svelte@3.2.0(prettier@3.2.5)(svelte@4.2.10):
+    resolution: {integrity: sha512-3474Zxxw8z4k64aqZmwTfcGdh/ULM2zNQslORdXEkNjKqqsSxBmiASazoxdCrmaqsbKD2Y0rxKhBEn1u0Y+j9g==}
     peerDependencies:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
@@ -2510,7 +2510,7 @@ packages:
       svelte: 4.2.10
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.11(prettier-plugin-svelte@3.1.2)(prettier@3.2.5):
+  /prettier-plugin-tailwindcss@0.5.11(prettier-plugin-svelte@3.2.0)(prettier@3.2.5):
     resolution: {integrity: sha512-AvI/DNyMctyyxGOjyePgi/gqj5hJYClZ1avtQvLlqMT3uDZkRbi4HhGUpok3DRzv9z7Lti85Kdj3s3/1CeNI0w==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -2560,7 +2560,7 @@ packages:
         optional: true
     dependencies:
       prettier: 3.2.5
-      prettier-plugin-svelte: 3.1.2(prettier@3.2.5)(svelte@4.2.10)
+      prettier-plugin-svelte: 3.2.0(prettier@3.2.5)(svelte@4.2.10)
     dev: true
 
   /prettier@3.2.5:

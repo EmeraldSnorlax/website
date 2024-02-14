@@ -91,7 +91,7 @@
 			</li>
 			<li class="mt-4">
 				<a href="/" class="sm:window flex flex-col sm:bg-red-950">
-					<span class="block text-xl sm:text-2xl">About Rain</span></a
+					<span class="block text-xl sm:text-2xl">About Me</span></a
 				>
 			</li>
 		</ul>
