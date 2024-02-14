@@ -3,7 +3,7 @@ title: Hello World!
 description: Test page to make sure everything is working.
 date: 2024-02-13
 ---
-# Hello World!
+# On the ethics of boinking animal people
 
 This is a test page to make sure everything is working. Don't mind me...
 ```ts
@@ -13,7 +13,21 @@ console.log('Hello, World!');
 
 ## Subheading
 
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptas. Ducimus, minima tenetur saepe facilis facere impedit architecto consequuntur eaque sed delectus ab atque, ipsa inventore optio cupiditate perferendis repellat!
+### Subsubheading
+
+#### Subsubsubheading
+
+##### Subsubsubsubheading
+
+###### Subsubsubsubsubheading
+
+
+
+In metal [typesetting](https://en.wikipedia.org/wiki/Typesetting), a font is a particular size, weight and style of a typeface. Each font is a matched set of type, with a piece (a "sort") for each glyph. A typeface consists of various fonts that share an overall design.
+
+In the 21st century, with the advent of computer fonts, the terms "font" and "typeface" are often used interchangeably, although the term "typeface" refers to the design of typographical lettering, whereas the term "font" refers to the specific style of a typeface, such as its size and weight.[1] For instance, the typeface "Bauer Bodoni" (sample shown here) includes fonts "Roman" (or "Regular"), "Bold" and "Italic"; each of these exists in a variety of sizes. The term "font" is correctly applied to any one of these alone but may be seen used loosely to refer to the whole typeface. When used in computers, each style is in a separate digital "font file".
+
+In both traditional typesetting and computing, the word "font" refers to the delivery mechanism of the typeface. In traditional typesetting, the font would be made from metal or wood type: to compose a page may require multiple fonts or even multiple typefaces.
 
 ![Example Image](/bg/180.webp)
 

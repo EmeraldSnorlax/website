@@ -1,0 +1,1 @@
+<h3 class="font-sans font-bold text-3xl text-neutral-700"><slot/></h3>

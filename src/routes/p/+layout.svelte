@@ -76,7 +76,7 @@
 						rainUnhover(canvas);
 					}}
 					href="/p"
-					class="window flex flex-col bg-blue-950"
+					class="window p-4 flex flex-col bg-blue-950"
 				>
 					<Crt>
 						<canvas
@@ -90,7 +90,7 @@
 				</a>
 			</li>
 			<li class="mt-4">
-				<a href="/" class="sm:window flex flex-col sm:bg-red-950">
+				<a href="/" class="sm:window sm:p-4 flex flex-col sm:bg-red-950">
 					<span class="block text-xl sm:text-2xl">About Me</span></a
 				>
 			</li>

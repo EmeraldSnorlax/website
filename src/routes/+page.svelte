@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		<div
-			class="window col-span-3 col-start-6 mx-auto w-full max-w-prose bg-teal-950 p-2 lg:my-auto lg:flex lg:max-w-none lg:flex-col lg:justify-center"
+			class="window p-4 col-span-3 col-start-6 mx-auto w-full max-w-prose bg-teal-950 p-2 lg:my-auto lg:flex lg:max-w-none lg:flex-col lg:justify-center"
 		>
 			<h1 class="fuzzy-text mb-2 font-sans text-4xl font-bold text-white lg:text-7xl">
 				Hello, chat.

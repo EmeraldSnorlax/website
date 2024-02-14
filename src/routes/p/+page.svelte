@@ -6,7 +6,7 @@
 	<title>rain.lgbt | posts</title>
 </svelte:head>
 
-<div class="window my-8 w-auto bg-gray-100 sm:mx-4 md:my-14 lg:mx-auto lg:max-w-screen-lg">
+<div class="window p-4 my-8 w-auto bg-gray-100 sm:mx-4 md:my-14 lg:mx-auto lg:max-w-screen-lg">
 	<h1 class="absolute -top-8 font-sans text-3xl font-bold">Posts</h1>
 	<ul class="-m-4">
 		{#each data.posts as post, i}
@@ -36,10 +36,10 @@
 					<div class="flex items-top mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 sm:h-6 me-2 text-gray-400" viewBox="0 0 24 24"><path fill="currentColor" d="M15 2h2v2h4v18H3V4h4V2h2v2h6zM5 8h14V6H5zm0 2v10h14V10z"/></svg>
             <span
-              class={`block text-sm sm:text-lg sm:mt-px ${i % 2 === 0 ? 'text-gray-500' : 'text-gray-600'}`}
+              class={`block font-bold sm:text-lg sm:mt-px ${i % 2 === 0 ? 'text-gray-500' : 'text-gray-600'}`}
             >
               Posted on
-              <time class="font-bold text-gray-900">
+              <time class="text-gray-900">
                 {new Date(post.date).getFullYear()}-{(new Date(post.date).getMonth() + 1)
                   .toString()
                   .padStart(2, '0')}-{new Date(post.date).getDate().toString().padStart(2, '0')}

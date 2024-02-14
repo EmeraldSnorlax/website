@@ -13,7 +13,7 @@
 
 @layer utilities {
 	.window {
-		@apply p-4 border-4 border-t-[2rem] border-gray-300 relative;
+		@apply border-4 border-t-[2rem] border-gray-300 relative;
 	}
 	.window::after {
 		@apply content-[''] block absolute top-0 -translate-y-[1.5rem] right-0 h-[calc(1rem-1px)] aspect-square bg-gray-400;
@@ -59,7 +59,7 @@ pre.shiki {
 	.scanlines::before {
 		content: '';
 		@apply fixed block top-0 left-0 bottom-0 right-0 z-40 pointer-events-none;
-		background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+		background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.025) 50%),
 			linear-gradient(90deg, rgba(255, 0, 0, 0.025), rgba(0, 128, 0, 0.05), rgba(0, 0, 255, 0.025));
 		background-size:
 			100% 1%,
