@@ -111,4 +111,7 @@
 			@apply link;
 		}
 	}
+	p {
+	@apply font-serif text-gray-200 lg:text-lg;
+}
 </style>

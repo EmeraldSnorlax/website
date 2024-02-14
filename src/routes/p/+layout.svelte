@@ -96,7 +96,9 @@
 			</li>
 		</ul>
 	</nav>
-	<slot />
+	<main>
+		<slot />
+	</main>
 </div>
 <noscript>
 	<style lang="postcss">
