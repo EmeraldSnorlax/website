@@ -55,10 +55,7 @@
 	}
 </script>
 
-<div
-	role="img"
-	class="block w-full"
->
+<div class="block w-full">
 	{#if browser}
 		{#each fragments as row, y}
 			<div class="rows flex">
@@ -67,14 +64,7 @@
 						{#if (x === 0 && y === 1) || (x === 2 && y === 2) || (x === 2 && y === 0)}
 							<!-- cool no signal crts, give them each a unique id by adding row and col so we can offset them slightly -->
 							<Crt>
-								<div class="no-signal">
-									<canvas
-										bind:this={fragment}
-										width={200}
-										height={200}
-										class="aspect-square w-full"
-									/>
-								</div>
+								<div class="no-signal"></div>
 							</Crt>
 						{:else if !(x === 2 && y === 0)}
 							<!-- the rain fragments-->
