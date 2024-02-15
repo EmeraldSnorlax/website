@@ -38,7 +38,7 @@
 		<span class="-ms-0.5 inline-block font-bold lowercase" id="slug">{post.slug}</span>
 	</div>
 
-	<div class="flex bg-neutral-400 px-2 justify-between">
+	<div class="flex justify-between bg-neutral-400 px-2">
 		<header>
 			<div class="flex w-full items-center text-lg">
 				<PixelarticonsInfoBox class="me-2 h-4 w-4 text-neutral-700" role="presentation" />
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 		</header>
-
+	</div>
 	<!-- page margin ruler type thingy, purely decorative -->
 	<div aria-hidden="true" class="hidden h-3 border-t-2 border-neutral-600 bg-neutral-300 lg:block">
 		<div
@@ -92,8 +92,8 @@
 
 <style lang="postcss">
 	#slug::after {
+		@apply text-base text-neutral-600;
 		content: '.md';
-		@apply text-base text-neutral-500 sm:text-2xl;
 	}
 
 	#page-ruler-top::before {
