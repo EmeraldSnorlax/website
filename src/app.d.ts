@@ -1,5 +1,7 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
+import 'unplugin-icons/types/svelte'
+
 declare global {
 	namespace App {
 		// interface Error {}
@@ -16,8 +18,8 @@ declare global {
 			slug: string;
 			/** full title of the post */
 			title: string;
-			/** date of the post */
-			date: Date;
+			/** date of the post. this is a EVIL FAKE STRING AS A DATE!! */
+			date: string;
 			/** one or two line description of the post for social embeds */
 			description: string;
 			/** tags for the post */
