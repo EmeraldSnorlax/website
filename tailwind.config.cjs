@@ -8,7 +8,7 @@ const config = {
 			'serif': ['Mondwest', 'Mondwest Fallback', 'Times New Roman', 'serif'],
 		}
 	},
-
+	darkMode: 'class',
 	plugins: []
 };
 

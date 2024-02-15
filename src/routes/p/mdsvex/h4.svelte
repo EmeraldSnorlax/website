@@ -1,1 +1,1 @@
-<h4 class="font-sans font-bold text-2xl mb-1 text-neutral-700"><slot/></h4>
+<h4 class="mb-1 font-sans text-2xl font-bold text-neutral-700 dark:text-neutral-100"><slot /></h4>

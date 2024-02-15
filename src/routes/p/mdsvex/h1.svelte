@@ -1,7 +1,7 @@
-<h1 class="font-sans font-bold text-5xl mb-3"><slot/></h1>
+<h1 class="mb-3 font-sans text-5xl font-bold text-black dark:text-white"><slot /></h1>
 
 <style lang="postcss">
-  h1 {
-    line-height: 0.8;
-  }
+	h1 {
+		line-height: 0.8;
+	}
 </style>

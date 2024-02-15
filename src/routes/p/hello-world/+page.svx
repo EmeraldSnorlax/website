@@ -8,7 +8,7 @@ tags:
   - development
 ---
 
-# Hello, World!
+# {title}
 
 ## Example
 
@@ -36,7 +36,7 @@ In the 21st century, with the advent of computer fonts, the terms "font" and "ty
 
 In both traditional typesetting and computing, the word "font" refers to the delivery mechanism of the typeface. In traditional typesetting, the font would be made from metal or wood type: to compose a page may require multiple fonts or even multiple typefaces.
 
-![Example Image](/bg/180.webp)
+![Example](/bg/180.webp)
 
 > Here's a quote. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptas. Ducimus, minima tenetur saepe facilis facere impedit architecto consequuntur eaque sed delectus ab atque, ipsa inventore optio cupiditate perferendis repellat!
 > - Some Person
