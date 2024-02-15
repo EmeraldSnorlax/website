@@ -80,7 +80,7 @@
 				>
 					<Crt>
 						<canvas
-							class="block aspect-square h-16 w-16 sm:h-28 sm:w-28"
+							class="block aspect-square h-full"
 							width={600}
 							height={600}
 							bind:this={canvas}
