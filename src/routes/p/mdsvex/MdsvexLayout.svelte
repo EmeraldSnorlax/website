@@ -24,17 +24,22 @@
 	post.date = unfuckedDate; // mdsvex is double cool for reading the frontmatter date as a string
 </script>
 
-<article class="mx-auto max-w-[160ch] border-2 border-neutral-300 bg-slate-500 sm:mt-16">
-	<header>
-		<div class="bg-neutral-300 px-2 pt-0.5 font-sans text-2xl sm:text-3xl">
-			<a
-				id="back-to-post-list"
-				class="-me-0.5 inline-block text-neutral-700 hover:text-blue-700"
-				href="/p">/<span class="font-normal underline underline-offset-2">posts</span>/</a
-			>
-			<span class="-ms-0.5 inline-block font-bold lowercase" id="slug">{post.slug}</span>
-		</div>
-		<section class="flex w-full items-center bg-neutral-400 px-2 text-lg">
+<div class="mx-auto max-w-[160ch] border-2 border-neutral-300 bg-slate-500 sm:mt-16">
+	<div class="bg-neutral-300 px-2 pt-0.5 font-sans text-2xl sm:text-3xl">
+		<a
+			aria-label="Back to post list"
+			id="back-to-post-list"
+			class="-me-0.5 inline-block text-neutral-700 hover:text-blue-700"
+			href="/p"
+			><span aria-hidden="true">/</span><span class="font-normal underline underline-offset-2"
+				>posts</span
+			><span aria-hidden="true">/</span></a
+		>
+		<span class="-ms-0.5 inline-block font-bold lowercase" id="slug">{post.slug}</span>
+	</div>
+
+	<header class="flex bg-neutral-400 px-2">
+		<div class="flex w-full items-center text-lg">
 			<PixelarticonsInfoBox class="me-2 h-4 w-4 text-neutral-700" role="presentation" />
 			<div class="mt-1">
 				<span class="-mb-3 text-neutral-800"
@@ -57,33 +62,32 @@
 					{/if}
 				</ul>
 			</div>
-		</section>
-
-		<!-- page margin ruler type thingy, purely decorative -->
-		<div
-			aria-hidden="true"
-			class="hidden h-3 border-t-2 border-neutral-600 bg-neutral-300 lg:block"
-		>
-			<div
-				id="page-ruler-top"
-				class="mx-auto w-[120ch] justify-between border-x-2 border-neutral-700 bg-neutral-100"
-			/>
-			<!-- arrow handles -->
-			<div class="mx-auto w-[120ch] px-16 flex items-center justify-between text-blue-900 -translate-y-3.5">
-				<PixelarticonsArrowBarRight class="-translate-x-[90%]  h-4 w-4" />
-				<PixelarticonsArrowBarLeft class="translate-x-[90%] h-4 w-4" />
-			</div>
 		</div>
 	</header>
 
+	<!-- page margin ruler type thingy, purely decorative -->
+	<div aria-hidden="true" class="hidden h-3 border-t-2 border-neutral-600 bg-neutral-300 lg:block">
+		<div
+			id="page-ruler-top"
+			class="mx-auto w-[120ch] justify-between border-x-2 border-neutral-700 bg-neutral-100"
+		/>
+		<!-- arrow handles -->
+		<div
+			class="mx-auto flex w-[120ch] -translate-y-3.5 items-center justify-between px-16 text-blue-900"
+		>
+			<PixelarticonsArrowBarRight class="h-4  w-4 -translate-x-[90%]" />
+			<PixelarticonsArrowBarLeft class="h-4 w-4 translate-x-[90%]" />
+		</div>
+	</div>
+
 	<div class="flex w-full justify-center border-t-2 border-black">
-		<section
+		<article
 			class="max-w-[120ch] bg-neutral-50 p-4 sm:mx-6 sm:my-12 sm:border-x-4 sm:border-b-8 sm:border-t-4 sm:border-black sm:p-16"
 		>
 			<slot />
-		</section>
+		</article>
 	</div>
-</article>
+</div>
 
 <style lang="postcss">
 	#slug::after {
