@@ -1,8 +1,16 @@
 ---
 title: Hello World!
+slug: hello-world
 description: Test page to make sure everything is working.
 date: 2024-02-13
+tags:
+  - test
+  - development
 ---
+
+# Hello, World!
+
+## Example
 
 This is a test page to make sure everything is working. Don't mind me...
 ```ts
