@@ -59,7 +59,7 @@
 <link rel="preload" href={neueBitUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 
 <div>
-	<nav class="mx-auto my-2 max-w-3xl">
+	<nav class="mx-auto my-2 max-w-3xl neon-link">
 		<ul class="flex flex-col items-center justify-between sm:flex-row sm:items-end">
 			<li>
 				<a
@@ -108,9 +108,3 @@
 		}
 	</style>
 </noscript>
-
-<style lang="postcss">
-	a {
-		@apply link;
-	}
-</style>
