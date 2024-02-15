@@ -38,32 +38,33 @@
 		<span class="-ms-0.5 inline-block font-bold lowercase" id="slug">{post.slug}</span>
 	</div>
 
-	<header class="flex bg-neutral-400 px-2">
-		<div class="flex w-full items-center text-lg">
-			<PixelarticonsInfoBox class="me-2 h-4 w-4 text-neutral-700" role="presentation" />
-			<div class="mt-1">
-				<span class="-mb-3 text-neutral-800"
-					>Created: <time
-						class="font-bold text-neutral-900"
-						datetime={dayjs(unfuckedDate).format('YYYY-MM-DD')}
-						>{dayjs(unfuckedDate).format('YYYY-MMM-DD')}</time
-					></span
-				>
-				<ul aria-label="post tags" class="flex">
-					{#if post.tags}
-						{#each post.tags as tag}
-							<li class="me-1 flex items-center text-base text-neutral-900">
-								<PixelarticonsLabel
-									role="presentation"
-									class="me-0.5 h-3 w-3 text-neutral-500"
-								/><span>{tag}</span>
-							</li>
-						{/each}
-					{/if}
-				</ul>
+	<div class="flex bg-neutral-400 px-2 justify-between">
+		<header>
+			<div class="flex w-full items-center text-lg">
+				<PixelarticonsInfoBox class="me-2 h-4 w-4 text-neutral-700" role="presentation" />
+				<div class="mt-1">
+					<span class="-mb-3 text-neutral-800"
+						>Created: <time
+							class="font-bold text-neutral-900"
+							datetime={dayjs(unfuckedDate).format('YYYY-MM-DD')}
+							>{dayjs(unfuckedDate).format('YYYY-MMM-DD')}</time
+						></span
+					>
+					<ul aria-label="post tags" class="flex">
+						{#if post.tags}
+							{#each post.tags as tag}
+								<li class="me-1 flex items-center text-base text-neutral-900">
+									<PixelarticonsLabel
+										role="presentation"
+										class="me-0.5 h-3 w-3 text-neutral-500"
+									/><span>{tag}</span>
+								</li>
+							{/each}
+						{/if}
+					</ul>
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
 	<!-- page margin ruler type thingy, purely decorative -->
 	<div aria-hidden="true" class="hidden h-3 border-t-2 border-neutral-600 bg-neutral-300 lg:block">
