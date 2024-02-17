@@ -1,0 +1,3 @@
+<blockquote class="">
+  <slot/>
+</blockquote>

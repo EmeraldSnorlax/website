@@ -1,1 +1,1 @@
-<h6 class="mb-1 font-sans text-xl font-bold text-neutral-600 dark:text-neutral-200"><slot /></h6>
+<h6 class="my-0.5 font-serif-bitmap text-xl text-neutral-800 dark:text-neutral-200"><slot /></h6>

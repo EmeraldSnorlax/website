@@ -5,7 +5,8 @@ const config = {
 	theme: {
 		fontFamily: {
 			'sans': ['NeueBit', "NeueBit Fallback", 'Arial', 'sans-serif'],
-			'serif': ['Mondwest', 'Mondwest Fallback', 'Times New Roman', 'serif'],
+			'serif': ['Editorial New', 'Times New Roman', 'serif'],
+			'serif-bitmap': ['Mondwest', 'Mondwest Fallback', 'Times New Roman', 'serif'],
 		}
 	},
 	darkMode: 'class',

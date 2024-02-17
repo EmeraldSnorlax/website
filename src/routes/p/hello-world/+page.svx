@@ -39,7 +39,8 @@ In both traditional typesetting and computing, the word "font" refers to the del
 ![Example](/bg/180.webp)
 
 > Here's a quote. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptas. Ducimus, minima tenetur saepe facilis facere impedit architecto consequuntur eaque sed delectus ab atque, ipsa inventore optio cupiditate perferendis repellat!
-> - Some Person
+
+--- Some Person
 
 *Hello, world!*
 **Hello, world!**
@@ -48,6 +49,8 @@ In both traditional typesetting and computing, the word "font" refers to the del
 - Hello
 - World
 - !
+
+As you can see, chat, this is shrimple.
 
 1. Hello
 2. World

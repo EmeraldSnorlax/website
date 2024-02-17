@@ -1,4 +1,10 @@
 <script context="module" lang="ts">
+	import '@emeraldsnorlax/pp-fonts/EditorialNew';
+	import editorialNewUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Regular.woff2?url';
+	import editorialNewItalicUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Italic.woff2?url';
+	import editorialNewBoldUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Bold.woff2?url';
+	import editorialNewBoldItalicUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/BoldItalic.woff2?url';
+
 	import h1 from './h1.svelte';
 	import h2 from './h2.svelte';
 	import h3 from './h3.svelte';
@@ -7,7 +13,11 @@
 	import h6 from './h6.svelte';
 	import p from './p.svelte';
 	import a from './a.svelte';
-	export { h1, h2, h3, h4, h5, h6, p, a };
+	import ul from './ul.svelte';
+	import ol from './ol.svelte';
+	import li from './li.svelte';
+	import blockquote from './blockquote.svelte';
+	export { h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, blockquote };
 
 	import PixelarticonsInfoBox from '~icons/pixelarticons/info-box';
 	import PixelarticonsLabel from '~icons/pixelarticons/label';
@@ -23,6 +33,31 @@
 	const unfuckedDate = new Date(Date.parse(post.date));
 	post.date = unfuckedDate; // mdsvex is double cool for reading the frontmatter date as a string
 </script>
+
+<svelte:head>
+	<link rel="preload" href={editorialNewUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+	<link
+		rel="preload"
+		href={editorialNewItalicUrl}
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href={editorialNewBoldUrl}
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		href={editorialNewBoldItalicUrl}
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+</svelte:head>
 
 <div
 	class="mx-auto max-w-[160ch] border-2 border-neutral-300 bg-slate-500 dark:border-neutral-400 dark:bg-slate-800 sm:mt-16"
@@ -86,7 +121,7 @@
 	<!-- page margin ruler type thingy, purely decorative. -->
 	<div
 		aria-hidden="true"
-		class="hidden h-3 border-t-2 border-neutral-600 bg-neutral-300 lg:block dark:invert"
+		class="hidden h-3 border-t-2 border-neutral-600 bg-neutral-300 dark:invert lg:block"
 	>
 		<div
 			id="page-ruler-top"
@@ -103,7 +138,7 @@
 
 	<div class="flex w-full justify-center border-t-2 border-black">
 		<article
-			class="max-w-[120ch] bg-neutral-50 p-4 dark:bg-neutral-900 sm:mx-6 sm:my-12 sm:border-x-4 sm:border-b-8 sm:border-t-4 sm:border-black sm:p-16"
+			class="w-full max-w-[120ch] bg-neutral-50 p-4 dark:bg-neutral-900 sm:mx-6 sm:my-12 sm:border-x-4 sm:border-b-8 sm:border-t-4 sm:border-black sm:p-16"
 		>
 			<slot />
 		</article>

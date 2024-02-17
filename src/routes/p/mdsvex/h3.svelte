@@ -1,1 +1,3 @@
-<h3 class="font-sans text-3xl font-bold text-neutral-700 dark:text-neutral-50"><slot /></h3>
+<h3 class="my-1.5 font-serif-bitmap text-3xl font-bold text-neutral-800 dark:text-neutral-50">
+	<slot />
+</h3>
