@@ -26,7 +26,7 @@
 						</h2>
 						<PixelarticonsBookOpen class="sm:h-8 sm:w-8 ms-2 hidden sm:block text-gray-400 dark:text-neutral-300 group-hover:text-blue-400 group-focus:text-blue-400" />
 					</div>
-					<span class="font-serif text-gray-700 dark:text-neutral-100 sm:text-xl">{post.description}</span>
+					<span class="font-serif-bitmap text-gray-700 dark:text-neutral-100 sm:text-xl">{post.description}</span>
 					<div class="flex items-top mt-2">
            <PixelarticonsCalendar class="sm:h-6 sm:w-6 me-3 hidden sm:block text-gray-400 dark:text-neutral-300" />
             <span
