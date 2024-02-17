@@ -23,20 +23,21 @@
 	import PixelarticonsLabel from '~icons/pixelarticons/label';
 </script>
 
-<script lang="ts">
+<script>
+	// @ts-nocheck mdsvex is so cool for not supporting typescript
 	import dayjs from 'dayjs';
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
-	// mdsvex is so cool for not supporting typescript
+
 	// see App.Post in src/app.d.ts for the shape of a post...
 	let post = { ...$$props };
 	const unfuckedDate = new Date(Date.parse(post.date));
 	post.date = unfuckedDate; // mdsvex is double cool for reading the frontmatter date as a string
-	let theme: 'light' | 'dark';
+	let theme;
 
 	if (browser) {
 		theme =
-			(localStorage.getItem('theme') as 'light' | 'dark') ||
+			(localStorage.getItem('theme')) ||
 			(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 	}
 	$: (() => {
