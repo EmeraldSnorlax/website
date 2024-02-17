@@ -21,8 +21,6 @@
 
 	import PixelarticonsInfoBox from '~icons/pixelarticons/info-box';
 	import PixelarticonsLabel from '~icons/pixelarticons/label';
-	import PixelarticonsArrowBarRight from '~icons/pixelarticons/arrow-bar-right';
-	import PixelarticonsArrowBarLeft from '~icons/pixelarticons/arrow-bar-left';
 </script>
 
 <script lang="ts">
@@ -138,13 +136,6 @@
 				id="page-ruler-top"
 				class="mx-auto w-[120ch] justify-between border-x-2 border-neutral-700 bg-neutral-100"
 			/>
-			<!-- arrow handles -->
-			<div
-				class="mx-auto flex w-[120ch] -translate-y-3.5 items-center justify-between px-16 text-blue-900 dark:text-blue-400"
-			>
-				<PixelarticonsArrowBarRight class="h-4 w-4 -translate-x-[95%] -translate-y-[5%]" />
-				<PixelarticonsArrowBarLeft class="h-4 w-4 -translate-y-[5%] translate-x-[90%]" />
-			</div>
 		</div>
 
 		<div class="flex w-full justify-center border-t-2 border-black">
