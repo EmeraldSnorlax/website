@@ -1,21 +1,23 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import { derunt } from './remark/derunt.js';
 import { codeToHtml } from 'shiki';
-import theme from './syntaxTheme.js';
 
+// https://github.com/pngwn/MDsveX/issues/514#issuecomment-1547078494
+// mdsvex is such a quirky little thing
 async function highlighter(code, lang) {
-	return await codeToHtml(code, {
+	const html = await codeToHtml((code), {
 		lang,
-		theme,
+		theme: 'rose-pine',
 		transformers: [
 			{
 				pre: (node) => {
 					// why the fuck does shiki set a tab index???
 					node.properties.tabindex = null;
-				}
-			}
-		]
+				},
+			},
+		],
 	});
+	return `{@html \`<div>${html}</div>\`}`;
 }
 
 const config = defineConfig({

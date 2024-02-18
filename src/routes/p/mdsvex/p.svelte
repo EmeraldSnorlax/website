@@ -13,10 +13,15 @@
 	:global(h6) + p,
 	:global(ul) + p,
 	:global(ol) + p,
-	:global(blockquote) > p,
-	:global(blockquote) + p,
-	:global(blockquote) + :global(cite) + p {
+	:global(blockquote) + p {
 		@apply mt-2 indent-0;
+	}
+
+	:global(blockquote) > p {
+	@apply indent-4 translate-y-px;
+	}
+	:global(blockquote) > p + p {
+		@apply mt-1;
 	}
 	:global(blockquote) > p > :global(em) {
 		@apply tracking-wider;

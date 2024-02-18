@@ -1,9 +1,9 @@
 <script context="module" lang="ts">
 	import '@emeraldsnorlax/pp-fonts/EditorialNew';
-	import editorialNewUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Regular.woff2?url';
-	import editorialNewItalicUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Italic.woff2?url';
-	import editorialNewBoldUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Bold.woff2?url';
-	import editorialNewBoldItalicUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/BoldItalic.woff2?url';
+	// import editorialNewUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Regular.woff2?url';
+	// import editorialNewItalicUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Italic.woff2?url';
+	// import editorialNewBoldUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Bold.woff2?url';
+	// import editorialNewBoldItalicUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/BoldItalic.woff2?url';
 
 	import h1 from './h1.svelte';
 	import h2 from './h2.svelte';
@@ -17,17 +17,18 @@
 	import ol from './ol.svelte';
 	import li from './li.svelte';
 	import blockquote from './blockquote.svelte';
-	export { h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, blockquote };
+	import img from './img.svelte';
+	export { h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, blockquote, img };
 
 	import PixelarticonsInfoBox from '~icons/pixelarticons/info-box';
 	import PixelarticonsLabel from '~icons/pixelarticons/label';
+
 </script>
 
 <script>
 	// @ts-nocheck mdsvex is so cool for not supporting typescript
 	import dayjs from 'dayjs';
 	import { browser } from '$app/environment';
-	import { onMount } from 'svelte';
 
 	// see App.Post in src/app.d.ts for the shape of a post...
 	let post = { ...$$props };
@@ -37,7 +38,7 @@
 
 	if (browser) {
 		theme =
-			(localStorage.getItem('theme')) ||
+			localStorage.getItem('theme') ||
 			(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 	}
 	$: (() => {
@@ -47,7 +48,7 @@
 	})();
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
 	<link rel="preload" href={editorialNewUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 	<link
 		rel="preload"
@@ -70,7 +71,7 @@
 		type="font/woff2"
 		crossorigin="anonymous"
 	/>
-</svelte:head>
+</svelte:head> -->
 
 <div class={theme}>
 	<div

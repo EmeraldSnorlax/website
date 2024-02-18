@@ -16,6 +16,8 @@ This is a test page to make sure everything is working. Don't mind me...
 ```ts
 // This is some example code
 console.log('Hello, World!');
+window.navigator;
+// ^?
 ```
 
 ## Subheading
@@ -42,8 +44,10 @@ In both traditional typesetting and computing, the word "font" refers to the del
 In both traditional typesetting and computing the word "font" refers to the delivery mechanism of the typeface. In traditional typesetting, the font would be made from metal or wood type: to compose a page may require multiple fonts or even multiple typefaces.
 
 > Here's a quote. This quote even has *emphasis* in it! Here's some **bold** too, and a ***bold emph*** for good measure! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptas. Ducimus, minima tenetur saepe facilis facere impedit architecto consequuntur eaque sed delectus ab atque, ipsa inventore optio cupiditate perferendis repellat!
+>
+> Here's a quote. This quote even has *emphasis* in it! Here's some **bold** too, and a ***bold emph*** for good measure! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptas. Ducimus, minima tenetur saepe facilis facere impedit architecto consequuntur eaque sed delectus ab atque, ipsa inventore optio cupiditate perferendis repellat!
 
-<cite>Some Person</cite>
+<cite>Typography, from <a href="">Wikipedia</a></cite>
 
 In both traditional typesetting and computing, the word "font" refers to the delivery mechanism of the typeface. In traditional typesetting, the font would be made from metal or wood type: to compose a page may require multiple fonts or even multiple typefaces.
 
