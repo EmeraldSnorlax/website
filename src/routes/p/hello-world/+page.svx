@@ -13,12 +13,6 @@ tags:
 ## Example
 
 This is a test page to make sure everything is working. Don't mind me...
-```ts
-// This is some example code
-console.log('Hello, World!');
-window.navigator;
-// ^?
-```
 
 ## Subheading
 
@@ -73,3 +67,10 @@ As you can see, chat, this is shrimple.
 1. Hello
 2. World
 3. !
+
+```ts
+// This is some example code
+console.log('Hello, World!');
+window.navigator;
+// ^?
+```
