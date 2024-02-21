@@ -10,7 +10,7 @@ const config = {
 			'mono': ['Monaspace Xenon', 'monospace']
 		}
 	},
-	darkMode: 'class',
+	darkMode: 'media',
 	plugins: []
 };
 

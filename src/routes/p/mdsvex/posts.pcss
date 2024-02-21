@@ -1,0 +1,78 @@
+article {
+	& > h1 {
+		@apply my-4 font-serif-bitmap text-5xl font-bold text-black dark:text-white;
+		line-height: 0.8;
+	}
+	& > h2 {
+		@apply my-1.5 font-serif-bitmap text-4xl font-bold text-neutral-900 dark:text-neutral-50;
+	}
+	& > h3 {
+		@apply my-1.5 font-serif-bitmap text-3xl font-bold text-neutral-800 dark:text-neutral-50;
+	}
+	& > h4 {
+		@apply my-1 font-serif-bitmap text-2xl font-bold text-neutral-800 dark:text-neutral-100;
+	}
+	& > h5 {
+		@apply my-0.5 font-serif-bitmap text-2xl text-neutral-800 dark:text-neutral-100;
+	}
+	& > h6 {
+		@apply my-0.5 font-serif-bitmap text-xl text-neutral-800 dark:text-neutral-200;
+	}
+
+	& > p {
+		@apply my-6 font-serif leading-relaxed text-neutral-800 sm:my-0.5 sm:indent-12 dark:text-neutral-200;
+	}
+	& > h1 + p,
+	& > h2 + p,
+	& > h3 + p,
+	& > h4 + p,
+	& > h5 + p,
+	& > h6 + p,
+	& > ul + p,
+	& > ol + p,
+	& > blockquote + p {
+		@apply mt-2 indent-0;
+	}
+
+	& > a,
+	& > cite a {
+		@apply text-teal-900 underline decoration-2 underline-offset-2 visited:text-purple-800 hover:text-teal-700 visited:hover:text-purple-950 dark:text-blue-300 dark:visited:text-purple-400 dark:hover:text-teal-200 dark:visited:hover:text-pink-400 dark:focus:text-teal-200 dark:visited:focus:text-pink-400;
+	}
+
+	& > ul,
+	& > ol {
+		@apply ms-4 mt-2;
+		& > li {
+			@apply ps-2 font-serif text-neutral-700 dark:text-neutral-300;
+		}
+	}
+	& > ul {
+		@apply list-disc;
+	}
+	& > ol {
+		@apply list-decimal;
+	}
+
+	& > blockquote {
+		@apply mt-4 translate-y-px border-s-4 border-neutral-300 ps-4 indent-4 italic dark:border-neutral-500;
+	}
+	& > blockquote + cite {
+		@apply ms-0.5 font-serif-bitmap text-lg not-italic text-neutral-700 dark:text-neutral-300;
+	}
+	& > blockquote + cite::before {
+		content: '―';
+		@apply me-2;
+	}
+	& > blockquote {
+		@apply m-auto font-serif leading-relaxed text-neutral-700 dark:text-neutral-300;
+	}
+	& > blockquote > p + p {
+		@apply mt-1;
+	}
+	& > blockquote em {
+		@apply tracking-wider;
+	}
+	& > blockquote strong {
+		@apply font-bold;
+	}
+}
