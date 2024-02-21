@@ -5,7 +5,7 @@ import { codeToHtml } from 'shiki';
 // https://github.com/pngwn/MDsveX/issues/514#issuecomment-1547078494
 // mdsvex is such a quirky little thing
 async function highlighter(code, lang) {
-	const html = await codeToHtml((code), {
+	const html = await codeToHtml(code, {
 		lang,
 		theme: 'rose-pine',
 		transformers: [
@@ -13,9 +13,9 @@ async function highlighter(code, lang) {
 				pre: (node) => {
 					// why the fuck does shiki set a tab index???
 					node.properties.tabindex = null;
-				},
-			},
-		],
+				}
+			}
+		]
 	});
 	return `{@html \`<div>${html}</div>\`}`;
 }

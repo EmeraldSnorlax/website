@@ -38,7 +38,7 @@
 		.hero {
 			background: url('/av/nojs.webp');
 			background-position: bottom;
-			@apply mx-auto aspect-square h-full w-full bg-contain bg-no-repeat sm:h-48 sm:w-48 bg-red-950 sm:bg-cover lg:my-auto lg:max-h-[30vh] sm:window;
+			@apply sm:window mx-auto aspect-square h-full w-full bg-red-950 bg-contain bg-no-repeat sm:h-48 sm:w-48 sm:bg-cover lg:my-auto lg:max-h-[30vh];
 		}
 		.hero-parent {
 			@apply flex items-center;
@@ -46,14 +46,14 @@
 	</style>
 </noscript>
 
-<main class="h-full min-h-screen pt-16 lg:px-8 lg:pt-0 neon-link" bind:this={main}>
+<main class="neon-link h-full min-h-screen pt-16 lg:px-8 lg:pt-0" bind:this={main}>
 	<div
 		class="mx-4 lg:m-auto lg:grid lg:min-h-screen lg:w-auto lg:grid-cols-9 lg:grid-rows-1 lg:gap-4"
 	>
 		<div
 			role="img"
 			aria-label="rain's avatar: a headshot and upper body. the avatar is a black and white drawing, and is wearing a suit jacket, shirt, blazer, and tie. has a red melting angel halo. rain is slightly frowning. this image is displayed in several fragments across multiple crt displays."
-			class="hero-parent mx-auto mb-8 h-full w-2/3 sm:w-2/5 lg:sticky lg:top-0 lg:col-span-3 lg:col-start-2 lg:mx-auto lg:mb-auto lg:h-screen lg:w-full lg:flex"
+			class="hero-parent mx-auto mb-8 h-full w-2/3 sm:w-2/5 lg:sticky lg:top-0 lg:col-span-3 lg:col-start-2 lg:mx-auto lg:mb-auto lg:flex lg:h-screen lg:w-full"
 		>
 			<div class="hero my-auto aspect-square max-h-[40vh] items-center lg:h-3/5">
 				<CrtGrid />

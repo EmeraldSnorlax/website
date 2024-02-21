@@ -4,10 +4,10 @@ const config = {
 
 	theme: {
 		fontFamily: {
-			'sans': ['NeueBit', "NeueBit Fallback", 'Arial', 'sans-serif'],
-			'serif': ['Editorial New', 'Times New Roman', 'serif'],
+			sans: ['NeueBit', 'NeueBit Fallback', 'Arial', 'sans-serif'],
+			serif: ['Editorial New', 'Times New Roman', 'serif'],
 			'serif-bitmap': ['Mondwest', 'Mondwest Fallback', 'Times New Roman', 'serif'],
-			'mono': ['Monaspace Xenon', 'monospace']
+			mono: ['Monaspace Xenon', 'monospace']
 		}
 	},
 	darkMode: 'media',

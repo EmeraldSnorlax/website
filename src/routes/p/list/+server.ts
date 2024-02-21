@@ -1,15 +1,15 @@
-import { json } from "@sveltejs/kit";
-
+import { json } from '@sveltejs/kit';
 
 export async function GET() {
 	const modules = import.meta.glob(`/src/routes/p/*/+page.{md,svx,svelte.md}`);
 
 	const postPromises = Object.entries(modules).map(([path, resolver]) =>
 		resolver().then(
-			(post) => ({
-				slug: path.split("/")[4],
-				...(post as unknown as App.MdsvexFile).metadata
-			} as App.Post)
+			(post) =>
+				({
+					slug: path.split('/')[4],
+					...(post as unknown as App.MdsvexFile).metadata
+				}) as App.Post
 		)
 	);
 

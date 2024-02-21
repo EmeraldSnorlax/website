@@ -1,4 +1,4 @@
-<div class="relative aspect-square h-full w-full overflow-clip -mb-4">
+<div class="relative -mb-4 aspect-square h-full w-full overflow-clip">
 	<div class="frame-inner relative m-auto aspect-square">
 		<slot />
 	</div>

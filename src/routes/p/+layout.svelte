@@ -59,7 +59,7 @@
 <link rel="preload" href={neueBitUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 
 <div>
-	<nav class="mx-auto my-2 max-w-3xl neon-link">
+	<nav class="neon-link mx-auto my-2 max-w-3xl">
 		<ul class="flex flex-col items-center justify-between sm:flex-row sm:items-end">
 			<li>
 				<a
@@ -76,7 +76,7 @@
 						rainUnhover(canvas);
 					}}
 					href="/p"
-					class="window p-4 flex flex-col bg-blue-950"
+					class="window flex flex-col bg-blue-950 p-4"
 				>
 					<Crt>
 						<canvas
@@ -90,7 +90,7 @@
 				</a>
 			</li>
 			<li class="mt-4">
-				<a href="/" class="sm:window sm:p-4 flex flex-col sm:bg-red-950">
+				<a href="/" class="sm:window flex flex-col sm:bg-red-950 sm:p-4">
 					<span class="block text-xl sm:text-2xl">About Me</span></a
 				>
 			</li>
