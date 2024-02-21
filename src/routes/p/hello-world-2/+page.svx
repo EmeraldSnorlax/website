@@ -1,6 +1,0 @@
----
-title: Hello, Chat.
-description: i'm running out of placeholders so this is going to have to do
-date: 1970-02-13
----
-# Hello World!

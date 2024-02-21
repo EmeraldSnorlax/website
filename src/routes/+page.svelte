@@ -109,6 +109,6 @@
 		}
 	}
 	p {
-		@apply font-serif text-gray-200 lg:text-lg;
+		@apply font-serif-bitmap text-gray-200 lg:text-lg;
 	}
 </style>
