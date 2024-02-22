@@ -32,6 +32,7 @@
 <svelte:head>
 	<title>rain.lgbt</title>
 	<meta name="author" content="rain" />
+	<meta name="description" content="a bad web dev." />
 
 	<meta property="og:title" content="rain" />
 	<meta name="twitter:title" content="rain" />

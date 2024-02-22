@@ -8,8 +8,10 @@
 <svelte:head>
 	<title>rain.lgbt | posts</title>
 	<meta name="author" content="rain" />
+	<meta name="description" content="rain's posts." />
 
 	<meta property="og:title" content="posts" />
+	<meta property="og:description" content="rain's posts." />
 	<meta name="twitter:title" content="posts" />
 	<meta name="twitter:site" content="rain.lgbt" />
 	<meta property="og:image" content="/av/pfp.webp" />
