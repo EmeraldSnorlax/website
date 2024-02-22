@@ -40,7 +40,7 @@
 							{post.title}
 						</h2>
 						<PixelarticonsBookOpen
-							class="ms-2 hidden text-gray-400 group-hover:text-blue-400 group-focus:text-blue-400 sm:block sm:h-8 sm:w-8 dark:text-neutral-300"
+							class="ms-2 hidden text-neutral-400 group-hover:text-blue-400 group-focus:text-blue-400 sm:block sm:h-8 sm:w-8 dark:text-neutral-300"
 						/>
 					</div>
 					<span class="font-serif-bitmap text-gray-700 sm:text-xl dark:text-neutral-100"
@@ -48,13 +48,13 @@
 					>
 					<div class="items-top mt-2 flex">
 						<PixelarticonsCalendar
-							class="me-3 hidden text-gray-400 sm:block sm:h-6 sm:w-6 dark:text-neutral-300"
+							class="me-3 hidden text-neutral-400 sm:block sm:h-6 sm:w-6 dark:text-neutral-300"
 						/>
 						<span
-							class={`block font-bold sm:mt-px sm:text-lg dark:text-neutral-400 ${i % 2 === 0 ? 'text-gray-500' : 'text-gray-600'}`}
+							class={`block font-bold sm:mt-px sm:text-lg dark:text-neutral-400 ${i % 2 === 0 ? 'text-neutral-600' : 'text-neutral-700'}`}
 						>
 							Posted on
-							<time class="text-gray-900 dark:text-neutral-200">
+							<time class="text-neutral-900 dark:text-neutral-200">
 								{dayjs(post.date).format('YYYY-MMM-DD')}
 							</time>
 						</span>
