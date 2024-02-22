@@ -1,9 +1,5 @@
 <script context="module" lang="ts">
 	import '@emeraldsnorlax/pp-fonts/EditorialNew';
-	// import editorialNewUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Regular.woff2?url';
-	// import editorialNewItalicUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Italic.woff2?url';
-	// import editorialNewBoldUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/Bold.woff2?url';
-	// import editorialNewBoldItalicUrl from '@emeraldsnorlax/pp-fonts/EditorialNew/BoldItalic.woff2?url';
 
 	import img from './img.svelte';
 	export { img };
@@ -22,31 +18,6 @@
 	const unfuckedDate = new Date(Date.parse(post.date));
 	post.date = unfuckedDate; // mdsvex is double cool for reading the frontmatter date as a string
 </script>
-
-<!-- <svelte:head>
-	<link rel="preload" href={editorialNewUrl} as="font" type="font/woff2" crossorigin="anonymous" />
-	<link
-		rel="preload"
-		href={editorialNewItalicUrl}
-		as="font"
-		type="font/woff2"
-		crossorigin="anonymous"
-	/>
-	<link
-		rel="preload"
-		href={editorialNewBoldUrl}
-		as="font"
-		type="font/woff2"
-		crossorigin="anonymous"
-	/>
-	<link
-		rel="preload"
-		href={editorialNewBoldItalicUrl}
-		as="font"
-		type="font/woff2"
-		crossorigin="anonymous"
-	/>
-</svelte:head> -->
 
 <div
 	class={`mx-auto max-w-[160ch] border-2 border-neutral-300 bg-slate-500 sm:mt-16 dark:border-neutral-400 dark:bg-slate-800`}
