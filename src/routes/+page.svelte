@@ -29,6 +29,20 @@
 	});
 </script>
 
+<svelte:head>
+	<title>rain.lgbt</title>
+	<meta name="author" content="rain" />
+
+	<meta property="og:title" content="rain" />
+	<meta name="twitter:title" content="rain" />
+	<meta name="twitter:site" content="rain.lgbt" />
+
+	<meta property="og:image" content="/av/pfp.webp" />
+	<meta property="og:image:type" content="image/webp" />
+	<meta property="og:image:width" content="300" />
+	<meta property="og:image:height" content="300" />
+</svelte:head>
+
 <noscript>
 	<style lang="postcss">
 		main {

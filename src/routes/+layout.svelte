@@ -5,7 +5,4 @@
 	import '@emeraldsnorlax/pp-fonts/NeueBit';
 </script>
 
-<svelte:head>
-	<title>rain.lgbt</title>
-</svelte:head>
 <slot />

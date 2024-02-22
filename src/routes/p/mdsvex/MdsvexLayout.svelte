@@ -19,6 +19,19 @@
 	post.date = unfuckedDate; // mdsvex is double cool for reading the frontmatter date as a string
 </script>
 
+<svelte:head>
+	<title>rain.lgbt | {post.title}</title>
+	<meta name="description" content={post.description} />
+	<meta name="keywords" content={post.tags} />
+	<meta name="author" content="rain" />
+
+	<meta property="og:title" content={post.title} />
+	<meta property="og:description" content={post.description} />
+	<meta name="twitter:title" content={post.title} />
+	<meta name="twitter:description" content={post.description} />
+	<meta name="twitter:site" content="rain.lgbt" />
+</svelte:head>
+
 <div
 	class={`mx-auto max-w-[160ch] border-2 border-neutral-300 bg-slate-500 sm:mt-16 dark:border-neutral-400 dark:bg-slate-800`}
 >
