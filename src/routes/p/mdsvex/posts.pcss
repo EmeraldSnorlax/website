@@ -1,26 +1,26 @@
 article {
 	& > h1 {
-		@apply my-4 font-serif-bitmap text-5xl font-bold text-black dark:text-white;
+		@apply my-2 text-7xl font-bold text-black dark:text-white;
 		line-height: 0.8;
 	}
 	& > h2 {
-		@apply my-1.5 font-serif-bitmap text-4xl font-bold text-neutral-900 dark:text-neutral-50;
+		@apply my-1 text-5xl font-bold text-neutral-900 dark:text-neutral-50;
 	}
 	& > h3 {
-		@apply my-1.5 font-serif-bitmap text-3xl font-bold text-neutral-800 dark:text-neutral-50;
+		@apply my-1 text-4xl font-bold text-neutral-900 dark:text-neutral-50;
 	}
 	& > h4 {
-		@apply my-1 font-serif-bitmap text-2xl font-bold text-neutral-800 dark:text-neutral-100;
+		@apply my-1 text-3xl font-bold text-neutral-900 dark:text-neutral-50;
 	}
 	& > h5 {
-		@apply my-0.5 font-serif-bitmap text-2xl text-neutral-800 dark:text-neutral-100;
+		@apply my-0.5 text-2xl font-bold text-neutral-800 dark:text-neutral-100;
 	}
 	& > h6 {
-		@apply my-0.5 font-serif-bitmap text-xl text-neutral-800 dark:text-neutral-200;
+		@apply my-0.5 text-2xl font-bold text-neutral-700 dark:text-neutral-200;
 	}
 
 	& > p {
-		@apply my-6 font-serif leading-relaxed text-neutral-800 sm:my-0.5 sm:indent-12 dark:text-neutral-200;
+		@apply my-6 font-fragment leading-relaxed text-neutral-800 dark:text-neutral-200;
 	}
 	& > h1 + p,
 	& > h2 + p,
@@ -31,7 +31,7 @@ article {
 	& > ul + p,
 	& > ol + p,
 	& > blockquote + p {
-		@apply mt-2 indent-0;
+		@apply mt-2;
 	}
 
 	& > a,
@@ -43,7 +43,7 @@ article {
 	& > ol {
 		@apply ms-4 mt-2;
 		& > li {
-			@apply ps-2 font-serif text-neutral-700 dark:text-neutral-300;
+			@apply ps-2 font-fragment text-neutral-700 dark:text-neutral-300;
 		}
 	}
 	& > ul {
@@ -54,7 +54,7 @@ article {
 	}
 
 	& > blockquote {
-		@apply mt-4 translate-y-px border-s-4 border-neutral-300 ps-4 indent-4 italic dark:border-neutral-500;
+		@apply m-auto my-4 border-s-4 border-neutral-300 py-0.5 ps-4 font-fragment italic leading-normal text-neutral-700 dark:border-neutral-500 dark:text-neutral-300;
 	}
 	& > blockquote + cite {
 		@apply ms-0.5 font-serif-bitmap text-lg not-italic text-neutral-700 dark:text-neutral-300;
@@ -63,16 +63,17 @@ article {
 		content: '―';
 		@apply me-2;
 	}
-	& > blockquote {
-		@apply m-auto font-serif leading-relaxed text-neutral-700 dark:text-neutral-300;
-	}
 	& > blockquote > p + p {
-		@apply mt-1;
+		@apply mt-6;
 	}
 	& > blockquote em {
 		@apply tracking-wider;
 	}
 	& > blockquote strong {
 		@apply font-bold;
+	}
+
+	.shiki-output {
+		@apply my-4;
 	}
 }

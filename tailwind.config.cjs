@@ -4,9 +4,9 @@ const config = {
 
 	theme: {
 		fontFamily: {
-			sans: ['NeueBit', 'NeueBit Fallback', 'Arial', 'sans-serif'],
-			serif: ['Editorial New', 'Times New Roman', 'serif'],
+			'sans': ['NeueBit', 'NeueBit Fallback', 'Arial', 'sans-serif'],
 			'serif-bitmap': ['Mondwest', 'Mondwest Fallback', 'Times New Roman', 'serif'],
+			fragment: ['Fragment Text', 'sans-serif'],
 			mono: ['Monaspace Xenon', 'monospace']
 		}
 	},

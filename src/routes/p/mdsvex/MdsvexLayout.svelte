@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-	import '@emeraldsnorlax/pp-fonts/EditorialNew';
+	import '@emeraldsnorlax/pp-fonts/Fragment/Text';
 
 	import img from './img.svelte';
 	export { img };
